@@ -11,8 +11,7 @@
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png" sizes="180x180">
 </head>
 <body>
-  {% block content %}{% endblock %}
+  {{ content | safe }}
   <script src="js/main.js"></script>
-  {% block scripts %}{% endblock %}
 </body>
 </html>
