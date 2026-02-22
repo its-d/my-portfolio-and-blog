@@ -5,10 +5,9 @@ _site/
 
 # ——— PII and secrets (never commit) ———
 *.pdf
-!resume.pdf
+!resume_pdf.pdf
 resume-*.pdf
 **/darian_lee*.pdf
-**/resume*.pdf
 .env
 .env.*
 .env.local
