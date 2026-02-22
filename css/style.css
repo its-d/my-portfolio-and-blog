@@ -81,9 +81,13 @@ a:hover {
   align-items: center;
 }
 
-.nav-brand {
+/* Name in top-left: white (nav links stay muted / accent on hover) */
+.nav .nav-brand {
   font-weight: 700;
   font-size: 1.25rem;
+  color: var(--text);
+}
+.nav .nav-brand:hover {
   color: var(--text);
 }
 
