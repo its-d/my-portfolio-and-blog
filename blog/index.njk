@@ -12,7 +12,7 @@ title: Blog
         <nav class="blog-sidebar-nav" aria-label="Filter by category">
           <a href="{{ '/blog/' | url }}" class="blog-sidebar-link active" data-category="">All</a>
           {% for cat in collections.categories %}
-          <a href="{{ '/blog/' | url }}?category={{ cat | urlencode }}" class="blog-sidebar-link" data-category="{{ cat }}">{{ cat }}</a>
+          <a href="{{ '/blog/' | url }}?category={{ cat | urlencode }}" class="blog-sidebar-link" data-category="{{ cat }}">{{ cat | categoryLabel }}</a>
           {% endfor %}
         </nav>
       </div>

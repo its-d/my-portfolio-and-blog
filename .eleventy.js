@@ -44,6 +44,12 @@ module.exports = function (eleventyConfig) {
     }
   });
 
+  // Category slug → display label: replace _ with space, title-case (e.g. case_study → Case Study)
+  eleventyConfig.addFilter("categoryLabel", function (str) {
+    if (!str || typeof str !== "string") return "";
+    return str.replace(/_/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
+  });
+
   return {
     dir: {
       input: ".",
