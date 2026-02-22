@@ -1,7 +1,28 @@
-<footer class="site-footer">
-  <p class="footer-copy">© {{ site.year }}. Made by {{ site.name }}.</p>
-  <div class="footer-links">
-    <a href="{{ site.linkedIn }}" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a>
-    <a href="{{ site.github }}" target="_blank" rel="noopener noreferrer" aria-label="GitHub">GitHub</a>
+<footer class="site-footer site-footer-columns">
+  <div class="footer-inner">
+    <div class="footer-col footer-about">
+      <h3 class="footer-col-title">About {{ site.authorFullName }}</h3>
+      <p class="footer-about-text">{{ site.authorBioFooter }}</p>
+      <a href="{{ site.github }}" target="_blank" rel="noopener noreferrer" class="btn btn-outline footer-github">Follow on GitHub</a>
+    </div>
+    <div class="footer-col footer-categories">
+      <h3 class="footer-col-title">Categories</h3>
+      <ul class="footer-cat-list">
+        {% for cat in collections.categories %}
+        <li><a href="{{ '/blog/' | url }}?category={{ cat | urlencode }}">{{ cat }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="footer-col footer-links">
+      <h3 class="footer-col-title">Useful Links</h3>
+      <ul class="footer-links-list">
+        <li><a href="{{ '/' | url }}">Home</a></li>
+        <li><a href="{{ '/' | url }}#projects">Projects</a></li>
+        <li><a href="{{ '/blog/' | url }}">Blog</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-copy">© {{ site.year }}. Made by {{ site.name }}.</p>
   </div>
 </footer>

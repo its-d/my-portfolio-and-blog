@@ -1,5 +1,5 @@
 ---
-# Blog post layout: share buttons + Giscus placeholder
+# Blog post layout: summary, metadata, hero image, share, About Author, Giscus
 ---
 
 <!DOCTYPE html>
@@ -27,8 +27,19 @@
     <article class="blog-article">
       <header class="blog-header">
         <h1 class="blog-title">{{ title }}</h1>
-        {% if date %}
-        <time class="blog-date" datetime="{{ date | date('YYYY-MM-DD') }}">{{ date | date('MMMM d, yyyy') }}</time>
+        {% if summary %}
+        <p class="blog-summary">{{ summary }}</p>
+        {% endif %}
+        <div class="blog-meta">
+          <span class="blog-meta-by">Posted by: <a href="{{ site.github }}" target="_blank" rel="noopener noreferrer">{{ site.authorName }}</a> on {% if date %}<time datetime="{{ date | date('YYYY-MM-DD') }}">{{ date | date('MMM d, yyyy') }}</time>{% endif %}</span>
+          {% if categories and categories.length %}
+          <span class="blog-meta-cats">Category: {% for cat in categories %}<a href="{{ '/blog/' | url }}?category={{ cat | urlencode }}" class="blog-cat-tag">{{ cat }}</a>{% if not loop.last %} {% endif %}{% endfor %}</span>
+          {% endif %}
+        </div>
+        {% if image %}
+        <div class="blog-hero-image-wrap">
+          <img src="{{ image }}" alt="" class="blog-hero-image" width="800" height="420">
+        </div>
         {% endif %}
       </header>
       <div class="blog-body">
@@ -36,16 +47,24 @@
       </div>
       <footer class="blog-footer">
         <div class="blog-share">
-          <span class="blog-share-label">Share:</span>
+          <span class="blog-share-label">Share this on</span>
           <a href="https://twitter.com/intent/tweet?text={{ title | urlencode }}&url={{ page.url | url | absoluteUrl }}" target="_blank" rel="noopener noreferrer" class="blog-share-link">X</a>
           <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ page.url | url | absoluteUrl }}" target="_blank" rel="noopener noreferrer" class="blog-share-link">LinkedIn</a>
+        </div>
+        <div class="blog-about-author">
+          <h3 class="blog-about-title">About {{ site.authorFullName }}</h3>
+          <div class="blog-about-inner">
+            <img src="images/hero-profile.png" alt="{{ site.authorFullName }}" class="blog-about-photo" width="80" height="80">
+            <div class="blog-about-text">
+              <p>{{ site.authorBioShort }}</p>
+              <a href="{{ site.github }}" target="_blank" rel="noopener noreferrer" aria-label="GitHub">GitHub</a>
+              <a href="{{ site.linkedIn }}" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a>
+            </div>
+          </div>
         </div>
         <div class="blog-comments" id="comments">
           <p class="blog-comments-label">Comments</p>
           {% include "partials/giscus.njk" %}
-        </div>
-        <div class="blog-contact">
-          <p>Connect: <a href="{{ site.linkedIn }}" target="_blank" rel="noopener noreferrer">LinkedIn</a> · <a href="{{ site.github }}" target="_blank" rel="noopener noreferrer">GitHub</a></p>
         </div>
       </footer>
     </article>

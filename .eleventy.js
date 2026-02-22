@@ -10,6 +10,16 @@ module.exports = function (eleventyConfig) {
     return collectionApi.getFilteredByGlob("blog/posts/*.md").reverse();
   });
 
+  eleventyConfig.addCollection("categories", function (collectionApi) {
+    const posts = collectionApi.getFilteredByGlob("blog/posts/*.md");
+    const cats = new Set();
+    posts.forEach((p) => {
+      const c = p.data.categories;
+      if (Array.isArray(c)) c.forEach((cat) => cats.add(cat));
+    });
+    return [...cats].sort();
+  });
+
   eleventyConfig.addFilter("date", function (date, format) {
     if (!date) return "";
     const d = new Date(date);
