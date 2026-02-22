@@ -2,9 +2,14 @@
   <h2 class="section-title">#skills</h2>
   <div class="skills-grid">
     {% for skill in skills %}
+    {% set skillName = skill.name if skill.name else skill %}
     <div class="skill-item">
-      <span class="skill-icon" aria-hidden="true">{{ skill[0] }}</span>
-      <span class="skill-name">{{ skill }}</span>
+      {% if skill.icon %}
+      <img src="{{ skill.icon | url | absoluteUrl }}" alt="" class="skill-icon-img" width="32" height="32" loading="lazy">
+      {% else %}
+      <span class="skill-icon" aria-hidden="true">{{ skillName[0] }}</span>
+      {% endif %}
+      <span class="skill-name">{{ skillName }}</span>
     </div>
     {% endfor %}
   </div>
