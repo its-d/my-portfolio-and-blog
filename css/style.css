@@ -380,6 +380,15 @@ section {
   color: var(--accent);
 }
 
+.skill-icon-img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+  border-radius: 10px;
+  background: transparent;
+}
+
 .skill-name {
   font-size: 0.85rem;
   text-align: center;

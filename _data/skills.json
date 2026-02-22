@@ -1,17 +1,9 @@
 [
-  "AWS",
-  "Terraform",
-  "Python",
-  "Docker",
-  "Git",
-  "GitHub",
-  "CI/CD",
-  "Kubernetes",
-  "Linux",
-  "CloudFormation",
-  "Lambda",
-  "EC2",
-  "S3",
-  "CloudWatch",
-  "SQL"
+  { "name": "AWS", "icon": "/images/blog/skills/aws.png" },
+  { "name": "Terraform", "icon": "/images/blog/skills/terraform.jpg" },
+  { "name": "Python", "icon": "/images/blog/skills/python.png" },
+  { "name": "Docker", "icon": "/images/blog/skills/docker.jpg" },
+  { "name": "GitHub", "icon": "/images/blog/skills/github.jpg" },
+  { "name": "Linux", "icon": "/images/blog/skills/linux.jpg" },
+  { "name": "SQL", "icon": "/images/blog/skills/sql.jpg" }
 ]
