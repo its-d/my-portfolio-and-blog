@@ -1,0 +1,25 @@
+<section class="projects" id="projects">
+  <div class="section-head">
+    <h2 class="section-title">#projects</h2>
+  </div>
+  <div class="project-grid">
+    {% for project in projects %}
+    <article class="project-card">
+      <div class="project-image-wrap">
+        <img src="{{ project.image | url }}" alt="" class="project-image" width="400" height="220">
+      </div>
+      <div class="project-tech">{{ project.tech | join(" · ") }}</div>
+      <h3 class="project-name">{{ project.name }}</h3>
+      <p class="project-desc">{{ project.description }}</p>
+      <div class="project-links">
+        {% if project.repoUrl %}<a href="{{ project.repoUrl }}" target="_blank" rel="noopener noreferrer" class="btn btn-outline">View repo</a>{% endif %}
+        {% if project.demoUrl %}<a href="{{ project.demoUrl }}" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Live demo</a>{% endif %}
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+  <div class="planned">
+    <h3 class="planned-title">Planned</h3>
+    <p class="planned-desc">More projects coming soon.</p>
+  </div>
+</section>

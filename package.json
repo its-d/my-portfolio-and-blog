@@ -1,0 +1,16 @@
+{
+  "name": "my-portfolio-and-blog",
+  "version": "1.0.0",
+  "description": "Personal portfolio and blog — 11ty, GitHub Pages",
+  "scripts": {
+    "build": "eleventy",
+    "serve": "eleventy --serve",
+    "start": "eleventy --serve"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  }
+}

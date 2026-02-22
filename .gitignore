@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+
+# Build
+_site/
+
+# PII / sensitive — do not commit
+*.pdf
+!resume.pdf
+resume-*.pdf
+**/resume*.pdf
+**/darian_lee*.pdf
+.env
+.env.*
+*.pem
+secrets/
+**/secrets/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# Logs
+*.log
+npm-debug.log*

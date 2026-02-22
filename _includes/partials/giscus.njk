@@ -1,0 +1,22 @@
+{% if giscus.repoId and giscus.categoryId and giscus.repoId != "REPLACE_WITH_REPO_ID" and giscus.categoryId != "REPLACE_WITH_CATEGORY_ID" %}
+<div class="giscus-placeholder" id="comments"></div>
+<script src="https://giscus.app/client.js"
+        data-repo="{{ giscus.repo }}"
+        data-repo-id="{{ giscus.repoId }}"
+        data-category="{{ giscus.category }}"
+        data-category-id="{{ giscus.categoryId }}"
+        data-mapping="{{ giscus.mapping }}"
+        data-strict="0"
+        data-reactions-enabled="{{ giscus.reactionsEnabled }}"
+        data-emit-metadata="0"
+        data-input-position="{{ giscus.inputPosition }}"
+        data-theme="{{ giscus.theme }}"
+        data-lang="{{ giscus.lang }}"
+        crossorigin="anonymous"
+        async>
+</script>
+{% else %}
+<div class="giscus-placeholder">
+  <p><strong>Comments (Giscus)</strong> — To enable: install <a href="https://github.com/apps/giscus" target="_blank" rel="noopener">giscus</a> on this repo, then at <a href="https://giscus.app" target="_blank" rel="noopener">giscus.app</a> enter your repo and copy <code>data-repo-id</code> and <code>data-category-id</code> into <code>_data/giscus.json</code>.</p>
+</div>
+{% endif %}
