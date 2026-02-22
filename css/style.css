@@ -1,21 +1,21 @@
-/* Black background, white text, grey subheadings, neon red for bold & accents */
+/* Black background, white text, grey subheadings, orange accent #ef3924 */
 :root {
   --bg: #000000;
   --bg-soft: #1a1a1a;
   --text: #ffffff;
   --text-muted: #9ca3af;
-  --accent: #ff073a;
-  --accent-glow: #ff3366;
-  --accent-pink: #ff073a;
-  --border: rgba(255, 7, 58, 0.25);
+  --accent: #ef3924;
+  --accent-glow: #f05a4a;
+  --accent-pink: #ef3924;
+  --border: rgba(239, 57, 36, 0.25);
   --card-bg: #1a1a1a;
-  --image-frame: rgba(255, 7, 58, 0.1);
+  --image-frame: rgba(239, 57, 36, 0.1);
 }
 
-/* Blog page — dark grey cards with neon red accent */
+/* Blog page — dark grey cards with orange accent */
 body.page-blog {
   --bg-soft: #1a1a1a;
-  --border: rgba(255, 7, 58, 0.25);
+  --border: rgba(239, 57, 36, 0.25);
   --card-bg: #1a1a1a;
 }
 
@@ -133,7 +133,7 @@ a:hover {
 
 .btn-outline:hover {
   border-color: var(--accent);
-  background: rgba(255, 7, 58, 0.12);
+  background: rgba(239, 57, 36, 0.12);
 }
 
 /* Hero */
@@ -389,6 +389,14 @@ section {
 }
 
 /* Certifications */
+.certifications-summary {
+  margin: 0 0 1.5rem;
+  max-width: 60ch;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+
 .certs-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -575,7 +583,7 @@ body.page-blog .footer-col {
 .blog-sidebar-link:hover,
 .blog-sidebar-link.active {
   color: var(--accent);
-  background: rgba(255, 7, 58, 0.12);
+  background: rgba(239, 57, 36, 0.12);
 }
 
 .blog-content {
