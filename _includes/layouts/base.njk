@@ -10,7 +10,7 @@
   <link rel="icon" href="images/favicon-32x32.png" type="image/png" sizes="32x32">
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png" sizes="180x180">
 </head>
-<body>
+<body class="{% if title == 'Blog' %}page-blog{% endif %}">
   {{ content | safe }}
   <script src="js/main.js"></script>
 </body>

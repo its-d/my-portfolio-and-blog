@@ -10,6 +10,20 @@
   --card-bg: rgba(15, 20, 25, 0.8);
 }
 
+/* Blog page — blue hue, distinct blocks */
+body.page-blog {
+  --bg: #0d1117;
+  --bg-soft: #161b22;
+  --card-bg: #161b22;
+  --border: rgba(56, 139, 253, 0.25);
+  --accent: #58a6ff;
+  --accent-glow: #79b8ff;
+}
+
+body.page-blog .site-header {
+  background: rgba(13, 17, 23, 0.95);
+}
+
 *,
 *::before,
 *::after {
@@ -404,10 +418,10 @@ section {
 .site-footer-columns .footer-inner {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2.5rem 1.5rem 1.5rem;
+  padding: 2rem 1.5rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 @media (max-width: 768px) {
@@ -416,8 +430,22 @@ section {
   }
 }
 
+/* Footer columns as distinct blocks (stronger on blog page) */
+.footer-col {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.25rem 1.5rem;
+}
+
+body.page-blog .footer-col {
+  background: var(--card-bg);
+  border-color: var(--border);
+}
+
 .footer-col-title {
   font-size: 1rem;
+  font-weight: 600;
   margin: 0 0 0.75rem;
   color: var(--text);
 }
@@ -483,11 +511,69 @@ section {
   color: var(--accent);
 }
 
-/* Blog index */
+/* Blog index — sidebar + content, blue blocks */
 .blog-index {
-  max-width: 1100px;
+  padding: 2rem 1.5rem 3rem;
+  min-height: 60vh;
+}
+
+.blog-layout {
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 3rem 1.5rem;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+@media (max-width: 768px) {
+  .blog-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.blog-sidebar {
+  position: sticky;
+  top: 5rem;
+}
+
+.blog-sidebar-block {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.25rem;
+}
+
+.blog-sidebar-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin: 0 0 0.75rem;
+  color: var(--text);
+}
+
+.blog-sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.blog-sidebar-link {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  padding: 0.35rem 0;
+  border-radius: 4px;
+  padding-left: 0.5rem;
+}
+
+.blog-sidebar-link:hover,
+.blog-sidebar-link.active {
+  color: var(--accent);
+  background: rgba(56, 139, 253, 0.08);
+}
+
+.blog-content {
+  min-width: 0;
 }
 
 .blog-index-title {
@@ -496,39 +582,16 @@ section {
   margin: 0 0 1.5rem;
 }
 
-.blog-categories {
-  margin-bottom: 1.5rem;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.5rem 1rem;
-}
-
-.blog-categories-label {
-  font-size: 0.9rem;
-  color: var(--text-muted);
-  margin-right: 0.25rem;
-}
-
-.blog-category-link {
-  font-size: 0.9rem;
-  padding: 0.25rem 0.6rem;
-  border-radius: 4px;
-  background: var(--card-bg);
-  border: 1px solid var(--border);
-  color: var(--text-muted);
-}
-
-.blog-category-link:hover,
-.blog-category-link.active {
-  border-color: var(--accent);
-  color: var(--accent);
-}
-
 .post-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
+}
+
+@media (max-width: 900px) {
+  .post-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .post-card {
@@ -543,11 +606,12 @@ section {
   border-radius: 8px;
   overflow: hidden;
   color: var(--text);
-  transition: border-color 0.2s;
+  transition: border-color 0.2s, box-shadow 0.2s;
 }
 
 .post-card-link:hover {
   border-color: var(--accent);
+  box-shadow: 0 0 0 1px var(--accent);
 }
 
 .post-card-image-wrap {
@@ -573,9 +637,10 @@ section {
 }
 
 .post-card-title {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   margin: 0 0 0.35rem;
   font-weight: 600;
+  color: var(--text);
 }
 
 .post-card-date {
@@ -595,10 +660,15 @@ section {
 .post-card-cta {
   display: inline-block;
   font-size: 0.9rem;
-  padding: 0.35rem 0.75rem;
-  background: var(--bg-soft);
+  padding: 0.4rem 1rem;
+  background: transparent;
   border: 1px solid var(--border);
   border-radius: 4px;
+  color: var(--text);
+}
+
+.post-card-link:hover .post-card-cta {
+  border-color: var(--accent);
   color: var(--accent);
 }
 
