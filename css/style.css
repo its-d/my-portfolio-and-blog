@@ -818,8 +818,11 @@ body.page-blog .footer-col {
 
 .blog-body .blog-keywords { color: var(--accent); font-weight: normal; }
 
-.blog-body .client-testimonial blockquote { color: var(--accent); font-weight: normal; text-decoration: none; }
+.blog-body .client-testimonial blockquote,
+.blog-body .client-testimonial blockquote p,
+.blog-body .client-testimonial blockquote cite { color: var(--accent); font-weight: normal; text-decoration: none; }
 .blog-body .client-testimonial blockquote strong { color: var(--accent); font-weight: normal; }
+.blog-body .client-testimonial cite { font-style: normal; display: block; margin-top: 0.5rem; }
 
 .blog-footer {
   margin-top: 2rem;
