@@ -53,7 +53,7 @@ Before implementing changes, I evaluated several mitigation options including Wo
 
 With the root cause confirmed, I moved forward with implementing the most effective and lowest-impact mitigation steps.
 
-### 1. Enable Cloudflare for the Website
+#### 1. Enable Cloudflare for the Website
 
 Their site was hosted on WordPress with plugins capable of enabling Cloudflare as a CDN and security layer. After activation:
 
@@ -61,7 +61,7 @@ Their site was hosted on WordPress with plugins capable of enabling Cloudflare a
 - Site performance improved
 - Cloudflare security features became available, including Turnstile
 
-### 2. Activate Cloudflare Turnstile
+#### 2. Activate Cloudflare Turnstile
 
 Turnstile silently verifies whether a visitor is human without disrupting user experience.
 
@@ -71,7 +71,7 @@ We:
 - Enabled Turnstile on key pages: Checkout, Login, Registration
 - Performed test actions to verify correct operation
 
-### 3. Validate Payment Flow
+#### 3. Validate Payment Flow
 
 We confirmed that:
 
@@ -79,7 +79,7 @@ We confirmed that:
 - The checkout process was not disrupted for real customers
 - Fixed-price books could safely be re-enabled
 
-### 4. Monitor for Continued Attack Activity
+#### 4. Monitor for Continued Attack Activity
 
 I instructed the client to keep fixed-price books active for several days.
 
@@ -102,8 +102,10 @@ After implementing Cloudflare Turnstile and re-enabling fixed-price books:
 ## Client Testimonial
 
 <div class="client-testimonial">
-> "I met Darian through a mutual contact when the organization I steward was in a vulnerable moment with our web security. Darian was a patient communicator, and was flexible with the timing, needs, and budget of our organization. When the fix he identified for our website was much easier than we initially worried it might be, he acted with integrity and helped us fix it ourselves. While I hope my organization's website will continue to run smoothly, I appreciated working with Darian and will do so again should the need arise."
-> — Swedish-American Historical Society
+<blockquote>
+  <p>I met Darian through a mutual contact when the organization I steward was in a vulnerable moment with our web security. Darian was a patient communicator, and was flexible with the timing, needs, and budget of our organization. When the fix he identified for our website was much easier than we initially worried it might be, he acted with integrity and helped us fix it ourselves. While I hope my organization's website will continue to run smoothly, I appreciated working with Darian and will do so again should the need arise.</p>
+  <cite>— Swedish-American Historical Society</cite>
+</blockquote>
 </div>
 
 ## Closing Thoughts
