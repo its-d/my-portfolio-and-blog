@@ -4,10 +4,6 @@ _site/
 .npm/
 
 # ——— PII and secrets (never commit) ———
-*.pdf
-!resume_pdf.pdf
-resume-*.pdf
-**/darian_lee*.pdf
 .env
 .env.*
 .env.local
