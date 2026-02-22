@@ -1,29 +1,37 @@
-# Dependencies
+# Dependencies and build output (never commit)
 node_modules/
-
-# Build
 _site/
+.npm/
 
-# PII / sensitive — do not commit
+# ——— PII and secrets (never commit) ———
 *.pdf
 !resume.pdf
 resume-*.pdf
-**/resume*.pdf
 **/darian_lee*.pdf
+**/resume*.pdf
 .env
 .env.*
+.env.local
 *.pem
+*.key
 secrets/
 **/secrets/
+**/config.local.*
+**/*-local.*
 
-# OS / editor
+# ——— Editor and OS ———
 .DS_Store
 Thumbs.db
 *.swp
 *.swo
+*~
 .idea/
 .vscode/
+*.sublime-*
 
-# Logs
+# ——— Logs and temp ———
 *.log
 npm-debug.log*
+.cache/
+tmp/
+temp/
