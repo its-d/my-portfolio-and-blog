@@ -20,6 +20,14 @@
   </div>
   <div class="planned">
     <h3 class="planned-title">Planned</h3>
+    {% if planned and planned.length %}
+    <ul class="planned-list">
+      {% for item in planned %}
+      <li class="planned-item"><strong>{{ item.name }}</strong>{% if item.description %} — {{ item.description }}{% endif %}</li>
+      {% endfor %}
+    </ul>
+    {% else %}
     <p class="planned-desc">More projects coming soon.</p>
+    {% endif %}
   </div>
 </section>
