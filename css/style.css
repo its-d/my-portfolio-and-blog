@@ -1,27 +1,25 @@
-/* Portfolio — dark theme, neon orange accent */
+/* Cyberpunk palette — neon blue main, neon pink accents */
 :root {
-  --bg: #0a0a0a;
-  --bg-soft: #0f1419;
-  --text: #e6edf3;
-  --text-muted: #8b949e;
-  --accent: #f26722;
-  --accent-glow: #ff8533;
-  --border: rgba(242, 103, 34, 0.2);
-  --card-bg: rgba(15, 20, 25, 0.8);
+  --bg: #01012b;
+  --bg-soft: #005678;
+  --text: #d1f7ff;
+  --text-muted: #05d9e8;
+  --accent: #05d9e8;
+  --accent-glow: #d1f7ff;
+  --accent-pink: #ff2a6d;
+  --border: rgba(5, 217, 232, 0.25);
+  --card-bg: rgba(0, 86, 120, 0.5);
+  --image-frame: rgba(209, 247, 255, 0.08);
 }
 
-/* Blog page — blue hue, distinct blocks */
+/* Blog page — same palette, distinct blocks */
 body.page-blog {
-  --bg: #0d1117;
-  --bg-soft: #161b22;
-  --card-bg: #161b22;
-  --border: rgba(56, 139, 253, 0.25);
-  --accent: #58a6ff;
-  --accent-glow: #79b8ff;
+  --border: rgba(5, 217, 232, 0.25);
+  --card-bg: rgba(0, 86, 120, 0.5);
 }
 
 body.page-blog .site-header {
-  background: rgba(13, 17, 23, 0.95);
+  background: rgba(1, 1, 43, 0.95);
 }
 
 *,
@@ -69,7 +67,7 @@ a:hover {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(10, 10, 10, 0.9);
+  background: rgba(1, 1, 43, 0.95);
   border-bottom: 1px solid var(--border);
 }
 
@@ -236,7 +234,7 @@ section {
 .section-title {
   font-size: 1.5rem;
   margin: 0 0 1.5rem;
-  color: var(--accent);
+  color: var(--accent-pink);
 }
 
 /* Projects */
@@ -447,7 +445,7 @@ body.page-blog .footer-col {
   font-size: 1rem;
   font-weight: 600;
   margin: 0 0 0.75rem;
-  color: var(--text);
+  color: var(--accent-pink);
 }
 
 .footer-about-text {
@@ -548,7 +546,7 @@ body.page-blog .footer-col {
   font-size: 0.95rem;
   font-weight: 600;
   margin: 0 0 0.75rem;
-  color: var(--text);
+  color: var(--accent-pink);
 }
 
 .blog-sidebar-nav {
@@ -578,7 +576,7 @@ body.page-blog .footer-col {
 
 .blog-index-title {
   font-size: 1.5rem;
-  color: var(--accent);
+  color: var(--accent-pink);
   margin: 0 0 1.5rem;
 }
 
@@ -616,20 +614,29 @@ body.page-blog .footer-col {
 
 .post-card-image-wrap {
   aspect-ratio: 16/9;
-  background: var(--bg-soft);
-  overflow: hidden;
+  background: var(--image-frame);
+  padding: 0.5rem;
+  margin: 0.5rem 0.5rem 0;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .post-card-image {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  border-radius: 4px;
 }
 
 .post-card-image-placeholder {
   width: 100%;
   height: 100%;
+  min-height: 120px;
   background: var(--bg-soft);
+  border-radius: 4px;
 }
 
 .post-card-body {
@@ -640,7 +647,7 @@ body.page-blog .footer-col {
   font-size: 1.05rem;
   margin: 0 0 0.35rem;
   font-weight: 600;
-  color: var(--text);
+  color: var(--accent-pink);
 }
 
 .post-card-date {
@@ -694,7 +701,7 @@ body.page-blog .footer-col {
 .blog-title {
   font-size: 1.75rem;
   margin: 0 0 0.5rem;
-  color: var(--text);
+  color: var(--accent-pink);
 }
 
 .blog-summary {
@@ -721,15 +728,20 @@ body.page-blog .footer-col {
 
 .blog-hero-image-wrap {
   margin: 1rem 0 1.5rem;
+  padding: 0.75rem;
+  background: var(--image-frame);
   border-radius: 8px;
-  overflow: hidden;
   border: 1px solid var(--border);
+  max-width: 85%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .blog-hero-image {
   width: 100%;
   height: auto;
   display: block;
+  border-radius: 4px;
 }
 
 .blog-body {
@@ -739,11 +751,11 @@ body.page-blog .footer-col {
 .blog-body strong {
   font-weight: 700;
   text-decoration: underline;
-  color: var(--text);
+  color: var(--accent-pink);
 }
 
-.blog-body h2 { font-size: 1.25rem; margin: 1.5rem 0 0.5rem; color: var(--text); }
-.blog-body h3 { font-size: 1.1rem; margin: 1.25rem 0 0.5rem; color: var(--text); }
+.blog-body h2 { font-size: 1.25rem; margin: 1.5rem 0 0.5rem; color: var(--accent-pink); }
+.blog-body h3 { font-size: 1.1rem; margin: 1.25rem 0 0.5rem; color: var(--accent-pink); }
 .blog-body p { margin: 0 0 1rem; }
 .blog-body ul, .blog-body ol { margin: 0 0 1rem; padding-left: 1.5rem; }
 .blog-body a { color: var(--accent); }
@@ -794,7 +806,7 @@ body.page-blog .footer-col {
 .blog-about-title {
   font-size: 1rem;
   margin: 0 0 0.75rem;
-  color: var(--text);
+  color: var(--accent-pink);
 }
 
 .blog-about-inner {

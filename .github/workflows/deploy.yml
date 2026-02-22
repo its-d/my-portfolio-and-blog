@@ -31,9 +31,9 @@ jobs:
       - name: Build
         run: npm run build
         env:
-          # For site at https://<user>.github.io/<repo>/
-          PATH_PREFIX: /${{ github.event.repository.name }}
-          BASE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}
+          # User site (repo name = username.github.io) → root URL; else project site with path prefix
+          PATH_PREFIX: ${{ github.event.repository.name == format('{0}.github.io', github.repository_owner) && '' || format('/{0}', github.event.repository.name) }}
+          BASE_URL: ${{ format('https://{0}.github.io', github.repository_owner) }}${{ github.event.repository.name == format('{0}.github.io', github.repository_owner) && '' || format('/{0}', github.event.repository.name) }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
