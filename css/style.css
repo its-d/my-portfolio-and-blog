@@ -1,26 +1,26 @@
-/* Home: dark maroon #280905, subtle cards, softer orange accents */
+/* Black background, white text, grey subheadings, neon red for bold & accents */
 :root {
-  --bg: #280905;
-  --bg-soft: #2d0b07;
-  --text: #f5eae8;
-  --text-muted: #c49c92;
-  --accent: #e87a4a;
-  --accent-glow: #f0a078;
-  --accent-pink: #d94a3d;
-  --border: rgba(230, 80, 27, 0.2);
-  --card-bg: rgba(40, 9, 5, 0.6);
-  --image-frame: rgba(230, 80, 27, 0.08);
+  --bg: #000000;
+  --bg-soft: #1a1a1a;
+  --text: #ffffff;
+  --text-muted: #9ca3af;
+  --accent: #ff073a;
+  --accent-glow: #ff3366;
+  --accent-pink: #ff073a;
+  --border: rgba(255, 7, 58, 0.25);
+  --card-bg: #1a1a1a;
+  --image-frame: rgba(255, 7, 58, 0.1);
 }
 
-/* Blog page only — blue card blocks (sidebar, footer columns, post cards) */
+/* Blog page — dark grey cards with neon red accent */
 body.page-blog {
-  --bg-soft: #0e2a47;
-  --border: rgba(67, 226, 226, 0.2);
-  --card-bg: rgba(14, 42, 71, 0.7);
+  --bg-soft: #1a1a1a;
+  --border: rgba(255, 7, 58, 0.25);
+  --card-bg: #1a1a1a;
 }
 
 body.page-blog .site-header {
-  background: rgba(40, 9, 5, 0.95);
+  background: rgba(0, 0, 0, 0.95);
 }
 
 *,
@@ -68,7 +68,7 @@ a:hover {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(40, 9, 5, 0.95);
+  background: rgba(0, 0, 0, 0.95);
   border-bottom: 1px solid var(--border);
 }
 
@@ -84,7 +84,7 @@ a:hover {
 .nav-brand {
   font-weight: 700;
   font-size: 1.25rem;
-  color: var(--text);
+  color: var(--accent);
 }
 
 .nav-links {
@@ -115,14 +115,14 @@ a:hover {
 
 .btn-primary {
   background: var(--accent);
-  color: var(--bg);
+  color: #fff;
   border: 1px solid var(--accent);
 }
 
 .btn-primary:hover {
   background: var(--accent-glow);
   border-color: var(--accent-glow);
-  color: var(--bg);
+  color: #fff;
 }
 
 .btn-outline {
@@ -133,7 +133,7 @@ a:hover {
 
 .btn-outline:hover {
   border-color: var(--accent);
-  background: rgba(230, 80, 27, 0.12);
+  background: rgba(255, 7, 58, 0.12);
 }
 
 /* Hero */
@@ -162,6 +162,7 @@ a:hover {
   font-weight: 700;
   margin: 0 0 0.5rem;
   line-height: 1.2;
+  color: var(--accent);
 }
 
 .hero-sub {
@@ -273,6 +274,8 @@ section {
 .project-name {
   margin: 0 1rem 0.25rem;
   font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--accent);
 }
 
 .project-desc {
@@ -290,6 +293,7 @@ section {
 .planned {
   margin-top: 2rem;
   padding: 1.5rem;
+  background: var(--card-bg);
   border: 1px dashed var(--border);
   border-radius: 8px;
 }
@@ -363,6 +367,8 @@ section {
 .exp-company {
   margin: 0 0 0.25rem;
   font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--accent);
 }
 
 .exp-meta {
@@ -398,7 +404,8 @@ section {
 }
 
 .cert-name {
-  color: var(--text);
+  font-weight: 700;
+  color: var(--accent);
 }
 
 /* Contact */
@@ -568,7 +575,7 @@ body.page-blog .footer-col {
 .blog-sidebar-link:hover,
 .blog-sidebar-link.active {
   color: var(--accent);
-  background: rgba(230, 80, 27, 0.12);
+  background: rgba(255, 7, 58, 0.12);
 }
 
 .blog-content {
