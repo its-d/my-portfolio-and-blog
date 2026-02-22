@@ -369,26 +369,30 @@ section {
 .skill-item {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  padding: 0.75rem;
   background: var(--bg);
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  border: 1px solid var(--accent);
   border-radius: 8px;
-  overflow: hidden;
   transition: border-color 0.2s ease;
 }
 
 .skill-item:hover {
-  border-color: rgba(255, 255, 255, 0.45);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px rgba(239, 57, 36, 0.2);
 }
 
-/* Top ~3/4: square icon area (like project image wrap), proportionate so icons aren’t squished */
+/* Square icon area – keeps proportions (e.g. Python not squished), compact size */
 .skill-icon-wrap {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 1 / 1;
+  width: 56px;
+  height: 56px;
+  flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   background: #000;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
 }
 
 .skill-icon-wrap .skill-icon-img {
@@ -398,14 +402,11 @@ section {
 }
 
 .skill-icon-wrap .skill-icon {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   color: var(--text);
 }
 
-/* Bottom ~1/4: skill name */
 .skill-name {
-  flex: 0 0 auto;
-  padding: 0.5rem 0.25rem;
   font-size: 0.85rem;
   text-align: center;
   font-weight: normal;
