@@ -5,46 +5,49 @@ title: Blog
 
 {% include "partials/nav.njk" %}
 <main class="blog-index">
-  <div class="blog-index-inner">
-    <h1 class="blog-index-title">#blog</h1>
-
-    <section class="blog-categories" aria-label="Filter by category">
-      <span class="blog-categories-label">Categories:</span>
-      <a href="{{ '/blog/' | url }}" class="blog-category-link active" data-category="">All</a>
-      {% for cat in collections.categories %}
-      <a href="{{ '/blog/' | url }}?category={{ cat | urlencode }}" class="blog-category-link" data-category="{{ cat }}">{{ cat }}</a>
-      {% endfor %}
-    </section>
-
-    <div class="post-grid" id="post-grid">
-      {% for post in collections.posts %}
-      <article class="post-card" data-categories="{{ post.data.categories | join(' ') }}">
-        <a href="{{ post.url | url }}" class="post-card-link">
-          <div class="post-card-image-wrap">
-            {% if post.data.image %}
-            <img src="{{ post.data.image }}" alt="" class="post-card-image" width="400" height="220">
-            {% else %}
-            <div class="post-card-image post-card-image-placeholder"></div>
-            {% endif %}
-          </div>
-          <div class="post-card-body">
-            <h2 class="post-card-title">{{ post.data.title }}</h2>
-            {% if post.data.date %}
-            <time class="post-card-date" datetime="{{ post.data.date | date('YYYY-MM-DD') }}">{{ post.data.date | date('MMM d, yyyy') }}</time>
-            {% endif %}
-            {% if post.data.summary %}
-            <p class="post-card-summary">{{ post.data.summary }}</p>
-            {% endif %}
-            <span class="post-card-cta">Read</span>
-          </div>
-        </a>
-      </article>
-      {% endfor %}
+  <div class="blog-layout">
+    <aside class="blog-sidebar">
+      <div class="blog-sidebar-block">
+        <h2 class="blog-sidebar-title">Categories</h2>
+        <nav class="blog-sidebar-nav" aria-label="Filter by category">
+          <a href="{{ '/blog/' | url }}" class="blog-sidebar-link active" data-category="">All</a>
+          {% for cat in collections.categories %}
+          <a href="{{ '/blog/' | url }}?category={{ cat | urlencode }}" class="blog-sidebar-link" data-category="{{ cat }}">{{ cat }}</a>
+          {% endfor %}
+        </nav>
+      </div>
+    </aside>
+    <div class="blog-content">
+      <h1 class="blog-index-title">#blog</h1>
+      <div class="post-grid" id="post-grid">
+        {% for post in collections.posts %}
+        <article class="post-card" data-categories="{{ post.data.categories | join(' ') }}">
+          <a href="{{ post.url | url }}" class="post-card-link">
+            <div class="post-card-image-wrap">
+              {% if post.data.image %}
+              <img src="{{ post.data.image }}" alt="" class="post-card-image" width="400" height="220">
+              {% else %}
+              <div class="post-card-image post-card-image-placeholder"></div>
+              {% endif %}
+            </div>
+            <div class="post-card-body">
+              <h2 class="post-card-title">{{ post.data.title }}</h2>
+              {% if post.data.date %}
+              <time class="post-card-date" datetime="{{ post.data.date | date('YYYY-MM-DD') }}">{{ post.data.date | date('MMM d, yyyy') }}</time>
+              {% endif %}
+              {% if post.data.summary %}
+              <p class="post-card-summary">{{ post.data.summary }}</p>
+              {% endif %}
+              <span class="post-card-cta">Read</span>
+            </div>
+          </a>
+        </article>
+        {% endfor %}
+      </div>
+      {% if collections.posts.length == 0 %}
+      <p class="post-empty">No posts yet.</p>
+      {% endif %}
     </div>
-
-    {% if collections.posts.length == 0 %}
-    <p class="post-empty">No posts yet.</p>
-    {% endif %}
   </div>
 </main>
 {% include "partials/footer.njk" %}
@@ -53,7 +56,7 @@ title: Blog
   var grid = document.getElementById('post-grid');
   if (!grid) return;
   var cards = grid.querySelectorAll('.post-card');
-  var categoryLinks = document.querySelectorAll('.blog-category-link');
+  var categoryLinks = document.querySelectorAll('.blog-sidebar-link');
   function getParam(name) {
     var m = new URLSearchParams(window.location.search);
     return m.get(name) || '';
