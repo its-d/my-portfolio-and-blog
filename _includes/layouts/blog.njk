@@ -33,7 +33,7 @@
         <div class="blog-meta">
           <span class="blog-meta-by">Posted by: <a href="{{ site.github }}" target="_blank" rel="noopener noreferrer">{{ site.authorName }}</a> on {% if date %}<time datetime="{{ date | date('YYYY-MM-DD') }}">{{ date | date('MMM d, yyyy') }}</time>{% endif %}</span>
           {% if categories and categories.length %}
-          <span class="blog-meta-cats">Category: {% for cat in categories %}<a href="{{ '/blog/' | url }}?category={{ cat | urlencode }}" class="blog-cat-tag">{{ cat }}</a>{% if not loop.last %} {% endif %}{% endfor %}</span>
+          <span class="blog-meta-cats">Category: {% for cat in categories %}<a href="{{ '/blog/' | url }}?category={{ cat | urlencode }}" class="blog-cat-tag">{{ cat | categoryLabel }}</a>{% if not loop.last %} {% endif %}{% endfor %}</span>
           {% endif %}
         </div>
         {% if image %}

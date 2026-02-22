@@ -335,6 +335,8 @@ section {
 .skill-name {
   font-size: 0.85rem;
   text-align: center;
+  font-weight: normal;
+  color: var(--accent);
 }
 
 /* About */
@@ -450,6 +452,8 @@ section {
   border: 1px solid var(--border);
   border-radius: 8px;
   padding: 1.25rem 1.5rem;
+  display: flex;
+  flex-direction: column;
 }
 
 body.page-blog .footer-col {
@@ -462,6 +466,7 @@ body.page-blog .footer-col {
   font-weight: 600;
   margin: 0 0 0.75rem;
   color: var(--accent-pink);
+  flex-shrink: 0;
 }
 
 .footer-about-text {
@@ -700,8 +705,9 @@ body.page-blog .footer-col {
 }
 
 /* Blog post */
+/* Slightly wider for less narrow feel; still a readable line length */
 .blog-main {
-  max-width: 720px;
+  max-width: 880px;
   margin: 0 auto;
   padding: 2rem 1.5rem 4rem;
 }
@@ -766,15 +772,15 @@ body.page-blog .footer-col {
 
 .blog-body strong {
   font-weight: 700;
-  text-decoration: underline;
-  color: var(--accent-pink);
+  color: var(--text);
 }
 
-.blog-body h2 { font-size: 1.25rem; margin: 1.5rem 0 0.5rem; color: var(--accent-pink); }
-.blog-body h3 { font-size: 1.1rem; margin: 1.25rem 0 0.5rem; color: var(--accent-pink); }
+.blog-body h2 { font-size: 1.25rem; margin: 1.5rem 0 0.5rem; color: var(--text); }
+.blog-body h3 { font-size: 1.1rem; margin: 1.25rem 0 0.5rem; color: var(--text); }
 .blog-body p { margin: 0 0 1rem; }
 .blog-body ul, .blog-body ol { margin: 0 0 1rem; padding-left: 1.5rem; }
-.blog-body a { color: var(--accent); }
+.blog-body a { color: var(--accent); text-decoration: underline; }
+.blog-body a:hover { color: var(--accent-glow); }
 .blog-body blockquote { margin: 1rem 0; padding-left: 1rem; border-left: 3px solid var(--accent); color: var(--text-muted); }
 
 .blog-footer {

@@ -9,7 +9,7 @@
       <h3 class="footer-col-title">Categories</h3>
       <ul class="footer-cat-list">
         {% for cat in collections.categories %}
-        <li><a href="{{ '/blog/' | url }}?category={{ cat | urlencode }}">{{ cat }}</a></li>
+        <li><a href="{{ '/blog/' | url }}?category={{ cat | urlencode }}">{{ cat | categoryLabel }}</a></li>
         {% endfor %}
       </ul>
     </div>
@@ -17,8 +17,11 @@
       <h3 class="footer-col-title">Useful Links</h3>
       <ul class="footer-links-list">
         <li><a href="{{ '/' | url }}">Home</a></li>
+        <li><a href="{{ '/' | url }}#about">About</a></li>
         <li><a href="{{ '/' | url }}#projects">Projects</a></li>
+        <li><a href="{{ '/' | url }}#skills">Skills</a></li>
         <li><a href="{{ '/blog/' | url }}">Blog</a></li>
+        <li><a href="{{ '/' | url }}#contact">Contact</a></li>
       </ul>
     </div>
   </div>
