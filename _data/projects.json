@@ -5,6 +5,6 @@
     "tech": ["Terraform", "EKS", "AWS"],
     "repoUrl": "https://github.com/its-d/terraform-aws-eks-microservice-framework",
     "demoUrl": null,
-    "image": "/images/project-placeholder.svg"
+    "image": "/images/projects/eks-framework.png"
   }
 ]

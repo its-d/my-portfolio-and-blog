@@ -336,6 +336,21 @@ section {
   color: var(--text-muted);
 }
 
+.planned-list {
+  margin: 0.5rem 0 0;
+  padding-left: 1.25rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.planned-item {
+  margin-bottom: 0.35rem;
+}
+
+.planned-item strong {
+  color: var(--text);
+}
+
 /* Skills */
 .skills-grid {
   display: grid;
