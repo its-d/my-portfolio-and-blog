@@ -28,12 +28,14 @@ jobs:
       - name: Install
         run: npm ci
 
+      # User site (its-d.github.io) is served at root; no path prefix
+      - name: Set deployment URL
+        run: |
+          echo "PATH_PREFIX=" >> $GITHUB_ENV
+          echo "BASE_URL=https://its-d.github.io" >> $GITHUB_ENV
+
       - name: Build
         run: npm run build
-        env:
-          # User site (repo name = username.github.io) → root URL; else project site with path prefix
-          PATH_PREFIX: ${{ github.event.repository.name == format('{0}.github.io', github.repository_owner) && '' || format('/{0}', github.event.repository.name) }}
-          BASE_URL: ${{ format('https://{0}.github.io', github.repository_owner) }}${{ github.event.repository.name == format('{0}.github.io', github.repository_owner) && '' || format('/{0}', github.event.repository.name) }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
