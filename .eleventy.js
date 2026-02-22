@@ -20,6 +20,9 @@ module.exports = function (eleventyConfig) {
     return d.toLocaleDateString();
   });
 
+  const baseUrl = process.env.BASE_URL || "";
+  eleventyConfig.addGlobalData("baseUrl", baseUrl);
+
   eleventyConfig.addFilter("absoluteUrl", function (path) {
     const base = process.env.BASE_URL || "https://example.com";
     if (!path) return base;
