@@ -1,24 +1,40 @@
 # Portfolio & Blog
 
-Single-page portfolio + blog. 11ty, GitHub Pages, dark theme, neon orange accent.
+Personal portfolio and blog site. Dark theme, single-page layout, blog with comments (Giscus). Built with Eleventy and deployed to GitHub Pages.
 
-## Setup
+---
 
-- `npm install` then `npm run build` or `npm run serve`
-- Add your profile image as `images/hero-profile.png`
-- **Favicons:** Put your 3 icons in `images/` with these exact names: `favicon.ico`, `favicon-32x32.png`, `apple-touch-icon.png` (32×32 and 180×180 are typical). Already linked in the layout.
-- For resume download: add a **no-PII** PDF as `resume.pdf` in repo root (no phone/email/address). If you don’t add it, remove or comment out the resume passthrough in `.eleventy.js` and the Resume links in the theme
-- **Giscus (comments):** See **`docs/GISCUS_SETUP.md`** — install the giscus app on the repo, then fill in `_data/giscus.json` with the IDs from [giscus.app](https://giscus.app)
+## Run locally
 
-## Security / PII
+```bash
+npm install
+npm run serve
+```
 
-- Do not commit phone, email, or physical address. `.gitignore` excludes common resume/secret paths.
-- Contact on site is Resume + LinkedIn + GitHub only (no contact form).
+Open http://localhost:8080 (or the port shown). Use `npm run build` to only build, no server.
+
+---
 
 ## Deploy
 
-Push to `main`; GitHub Actions builds and deploys to GitHub Pages. If the site is at `https://<user>.github.io/<repo>/`, `PATH_PREFIX` and `BASE_URL` are set in the workflow.
+Push to the `main` branch. GitHub Actions builds the site and deploys it to GitHub Pages.
 
-## Spec
+In the repo **Settings → Pages**, set the source to **GitHub Actions**. The site will be at `https://<username>.github.io/my-portfolio-and-blog/`.
 
-See `docs/BUILD_SPEC.md` and `docs/NEW_SITE_QA_SECURITY_COST_PRIVACY.md`.
+---
+
+## What’s in the repo
+
+- **Home:** Hero, projects, skills, about, experience, certifications, contact (Resume + LinkedIn + GitHub only).
+- **Blog:** Posts in `blog/posts/` (Markdown). Comments via Giscus (GitHub Discussions).
+- **Content:** Edit `_data/site.json` for name, title, links; `_data/projects.json`, `_data/experience.json`, etc. for sections. Put profile photo at `images/hero-profile.png`, favicons in `images/` as `favicon.ico`, `favicon-32x32.png`, `apple-touch-icon.png`. Optional: add a no-PII resume as `resume.pdf` in the repo root.
+
+Details for Giscus setup are in `docs/GISCUS_SETUP.md`.
+
+---
+
+## Keeping the repo safe
+
+- Do not commit your phone number, personal email, or physical address. The only PDF allowed by `.gitignore` is `resume.pdf` in the repo root; use a version without PII.
+- Do not commit `.env` files, API keys, or secrets. The workflow uses no secrets; it only builds and deploys from the repo.
+- Only you (and collaborators you add) can change the repo and the deployed site. Restrict write access in **Settings → Collaborators** if needed.
