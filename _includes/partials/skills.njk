@@ -6,7 +6,7 @@
     <div class="skill-item">
       <div class="skill-icon-wrap">
         {% if skill.icon %}
-        <img src="{{ skill.icon | url | absoluteUrl }}" alt="" class="skill-icon-img" loading="lazy">
+        <img src="{{ skill.icon | url | absoluteUrl }}" alt="" class="skill-icon-img{% if skill.whiteBg %} skill-icon-img--multiply{% endif %}" loading="lazy">
         {% else %}
         <span class="skill-icon" aria-hidden="true">{{ skillName[0] }}</span>
         {% endif %}
