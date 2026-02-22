@@ -6,7 +6,7 @@
     {% for project in projects %}
     <article class="project-card">
       <div class="project-image-wrap">
-        <img src="{{ project.image | url }}" alt="" class="project-image" width="400" height="220">
+        <img src="{{ project.image | url | absoluteUrl }}" alt="" class="project-image" width="400" height="220">
       </div>
       <div class="project-tech">{{ project.tech | join(" · ") }}</div>
       <h3 class="project-name">{{ project.name }}</h3>

@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {% if baseUrl %}<base href="{{ baseUrl }}/">{% endif %}
   <title>{% if title %}{{ title }} | {% endif %}{{ site.name }}</title>
-  <link rel="stylesheet" href="{{ '/css/style.css' | url }}">
-  <link rel="icon" href="{{ '/images/favicon.ico' | url }}" type="image/x-icon">
-  <link rel="icon" href="{{ '/images/favicon-32x32.png' | url }}" type="image/png" sizes="32x32">
-  <link rel="apple-touch-icon" href="{{ '/images/apple-touch-icon.png' | url }}" sizes="180x180">
+  <link rel="stylesheet" href="{{ '/css/style.css' | url | absoluteUrl }}">
+  <link rel="icon" href="{{ '/images/favicon.ico' | url | absoluteUrl }}" type="image/x-icon">
+  <link rel="icon" href="{{ '/images/favicon-32x32.png' | url | absoluteUrl }}" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="{{ '/images/apple-touch-icon.png' | url | absoluteUrl }}" sizes="180x180">
 </head>
 <body class="{% if title == 'Blog' %}page-blog{% endif %}">
   {{ content | safe }}
-  <script src="{{ '/js/main.js' | url }}"></script>
+  <script src="{{ '/js/main.js' | url | absoluteUrl }}"></script>
 </body>
 </html>
