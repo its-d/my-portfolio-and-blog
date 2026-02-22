@@ -4,7 +4,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("images");
   eleventyConfig.addPassthroughCopy("favicon*");
   // Resume: add only the file you intend to publish (no-PII version)
-  eleventyConfig.addPassthroughCopy("resume_pdf.pdf");
+  eleventyConfig.addPassthroughCopy("resume.pdf");
 
   eleventyConfig.addCollection("posts", function (collectionApi) {
     return collectionApi.getFilteredByGlob("blog/posts/*.md").reverse();

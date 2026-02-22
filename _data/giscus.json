@@ -1,11 +1,13 @@
 {
-  "repo": "its-d/my-portfolio-and-blog",
+  "repo": "its-d/its-d.github.io",
   "repoId": "R_kgDORWLoVA",
   "category": "Announcements",
   "categoryId": "DIC_kwDORWLoVM4C2_Rs",
   "mapping": "pathname",
-  "theme": "preferred_color_scheme",
-  "lang": "en",
+  "strict": "0",
   "reactionsEnabled": "1",
-  "inputPosition": "bottom"
+  "emitMetadata": "0",
+  "inputPosition": "bottom",
+  "theme": "preferred_color_scheme",
+  "lang": "en"
 }
