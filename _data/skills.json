@@ -2,8 +2,11 @@
   { "name": "AWS", "icon": "/images/blog/skills/aws.png" },
   { "name": "Terraform", "icon": "/images/blog/skills/terraform.jpg" },
   { "name": "Python", "icon": "/images/blog/skills/python.png" },
-  { "name": "Docker", "icon": "/images/blog/skills/docker.jpg" },
   { "name": "GitHub", "icon": "/images/blog/skills/github.jpg" },
+  { "name": "GitLab", "icon": "/images/blog/skills/gitlab.jpg" },
+  { "name": "Grafana", "icon": "/images/blog/skills/grafana.jpg" },
+  { "name": "Docker", "icon": "/images/blog/skills/docker.jpg" },
   { "name": "Linux", "icon": "/images/blog/skills/linux.jpg" },
-  { "name": "SQL", "icon": "/images/blog/skills/sql.jpg" }
+  { "name": "SQL", "icon": "/images/blog/skills/sql.jpg" },
+  { "name": "Agile", "icon": "/images/blog/skills/agile.jpg" }
 ]
