@@ -4,13 +4,13 @@
     {% for skill in skills %}
     {% set skillName = skill.name if skill.name else skill %}
     <div class="skill-item">
-      {% if skill.icon %}
-      <span class="skill-icon-wrap">
-        <img src="{{ skill.icon | url | absoluteUrl }}" alt="" class="skill-icon-img" width="48" height="48" loading="lazy">
-      </span>
-      {% else %}
-      <span class="skill-icon" aria-hidden="true">{{ skillName[0] }}</span>
-      {% endif %}
+      <div class="skill-icon-wrap">
+        {% if skill.icon %}
+        <img src="{{ skill.icon | url | absoluteUrl }}" alt="" class="skill-icon-img" loading="lazy">
+        {% else %}
+        <span class="skill-icon" aria-hidden="true">{{ skillName[0] }}</span>
+        {% endif %}
+      </div>
       <span class="skill-name">{{ skillName }}</span>
     </div>
     {% endfor %}
