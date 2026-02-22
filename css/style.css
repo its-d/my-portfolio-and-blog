@@ -1,26 +1,26 @@
-/* Black background, white text, grey subheadings, orange accent #ef3924 */
+/* Option 1: Light high-contrast — off-white bg, dark text, orange accent #ef3924 */
 :root {
-  --bg: #000000;
-  --bg-soft: #1a1a1a;
-  --text: #ffffff;
-  --text-muted: #9ca3af;
+  --bg: #f5f5f5;
+  --bg-soft: #eeeeee;
+  --text: #1a1a1a;
+  --text-muted: #4b5563;
   --accent: #ef3924;
   --accent-glow: #f05a4a;
   --accent-pink: #ef3924;
-  --border: rgba(239, 57, 36, 0.25);
-  --card-bg: #1a1a1a;
-  --image-frame: rgba(239, 57, 36, 0.1);
+  --border: rgba(239, 57, 36, 0.2);
+  --card-bg: #ffffff;
+  --image-frame: rgba(239, 57, 36, 0.08);
 }
 
-/* Blog page — dark grey cards with orange accent */
+/* Blog page — white/light cards */
 body.page-blog {
-  --bg-soft: #1a1a1a;
-  --border: rgba(239, 57, 36, 0.25);
-  --card-bg: #1a1a1a;
+  --bg-soft: #eeeeee;
+  --border: rgba(239, 57, 36, 0.2);
+  --card-bg: #ffffff;
 }
 
 body.page-blog .site-header {
-  background: rgba(0, 0, 0, 0.95);
+  background: rgba(245, 245, 245, 0.95);
 }
 
 *,
@@ -68,7 +68,7 @@ a:hover {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(0, 0, 0, 0.95);
+  background: rgba(245, 245, 245, 0.95);
   border-bottom: 1px solid var(--border);
 }
 
@@ -274,6 +274,7 @@ section {
   overflow: hidden;
   padding: 0 0 1rem;
   transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
 }
 .project-card:hover {
   border-color: var(--accent);
@@ -352,6 +353,7 @@ section {
   border: 1px solid var(--border);
   border-radius: 8px;
   transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
 }
 .skill-item:hover {
   border-color: var(--accent);
@@ -809,7 +811,16 @@ body.page-blog .footer-col {
 }
 
 .blog-body h2 { font-size: 1.25rem; margin: 1.5rem 0 0.5rem; color: var(--text); }
-.blog-body h3 { font-size: 1.1rem; margin: 1.25rem 0 0.5rem; color: var(--text); }
+.blog-body h3 { font-size: 1.15rem; margin: 1.5rem 0 0.5rem; color: var(--text); font-weight: 700; }
+.blog-body h4 {
+  font-size: 1.05rem;
+  margin: 1.35rem 0 0.4rem;
+  color: var(--text);
+  font-weight: 700;
+  padding: 0.4rem 0 0.4rem 0.75rem;
+  border-left: 3px solid var(--accent);
+  background: rgba(239, 57, 36, 0.06);
+}
 .blog-body p { margin: 0 0 1rem; }
 .blog-body ul, .blog-body ol { margin: 0 0 1rem; padding-left: 1.5rem; }
 .blog-body a { color: var(--accent); text-decoration: underline; }
