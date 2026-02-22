@@ -30,11 +30,12 @@ module.exports = function (eleventyConfig) {
     return d.toLocaleDateString();
   });
 
+  // GitHub Actions sets BASE_URL; for user site (its-d.github.io) it is https://its-d.github.io
   const baseUrl = process.env.BASE_URL || "";
   eleventyConfig.addGlobalData("baseUrl", baseUrl);
 
   eleventyConfig.addFilter("absoluteUrl", function (path) {
-    const base = process.env.BASE_URL || "https://example.com";
+    const base = process.env.BASE_URL || "https://its-d.github.io";
     if (!path) return base;
     try {
       return new URL(path, base.endsWith("/") ? base : base + "/").href;
