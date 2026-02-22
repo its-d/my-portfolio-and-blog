@@ -1,21 +1,22 @@
-/* Warm dark palette — maroon/red base, orange accents */
+/* Home: dark maroon #280905, subtle cards, softer orange accents */
 :root {
   --bg: #280905;
-  --bg-soft: #740A03;
+  --bg-soft: #2d0b07;
   --text: #f5eae8;
   --text-muted: #c49c92;
-  --accent: #E6501B;
-  --accent-glow: #ff6b3d;
-  --accent-pink: #C3110C;
-  --border: rgba(230, 80, 27, 0.3);
-  --card-bg: rgba(116, 10, 3, 0.6);
-  --image-frame: rgba(230, 80, 27, 0.1);
+  --accent: #e87a4a;
+  --accent-glow: #f0a078;
+  --accent-pink: #d94a3d;
+  --border: rgba(230, 80, 27, 0.2);
+  --card-bg: rgba(40, 9, 5, 0.6);
+  --image-frame: rgba(230, 80, 27, 0.08);
 }
 
-/* Blog page — same palette */
+/* Blog page only — blue card blocks (sidebar, footer columns, post cards) */
 body.page-blog {
-  --border: rgba(230, 80, 27, 0.3);
-  --card-bg: rgba(116, 10, 3, 0.6);
+  --bg-soft: #0e2a47;
+  --border: rgba(67, 226, 226, 0.2);
+  --card-bg: rgba(14, 42, 71, 0.7);
 }
 
 body.page-blog .site-header {
