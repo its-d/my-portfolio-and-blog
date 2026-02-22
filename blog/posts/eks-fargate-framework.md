@@ -136,4 +136,4 @@ EKS on Fargate delivers the best of both worlds: full Kubernetes control with ze
 
 The [Terraform AWS EKS Microservice Framework](https://github.com/its-d/terraform-aws-eks-microservice-framework) I built aims to make this setup repeatable and production-ready, helping you focus on what matters most: building and shipping applications.
 
-**Keywords:** AWS, EKS, Fargate, Terraform, DevOps, CI/CD, GitHub Actions, IRSA, Serverless Containers
+**Keywords:** <span class="blog-keywords">AWS, EKS, Fargate, Terraform, DevOps, CI/CD, GitHub Actions, IRSA, Serverless Containers</span>
