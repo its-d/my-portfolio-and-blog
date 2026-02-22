@@ -1,0 +1,55 @@
+---
+# Blog post layout: share buttons + Giscus placeholder
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ title }} | {{ site.name }}</title>
+  <link rel="stylesheet" href="{{ '/css/style.css' | url }}">
+  <link rel="icon" href="{{ '/images/favicon.ico' | url }}" type="image/x-icon">
+  <link rel="icon" href="{{ '/images/favicon-32x32.png' | url }}" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="{{ '/images/apple-touch-icon.png' | url }}" sizes="180x180">
+  {% if description %}
+  <meta name="description" content="{{ description }}">
+  {% endif %}
+  <meta property="og:title" content="{{ title }}">
+  {% if description %}
+  <meta property="og:description" content="{{ description }}">
+  {% endif %}
+</head>
+<body>
+  {% include "partials/nav.njk" %}
+  <main class="blog-main">
+    <article class="blog-article">
+      <header class="blog-header">
+        <h1 class="blog-title">{{ title }}</h1>
+        {% if date %}
+        <time class="blog-date" datetime="{{ date | date('YYYY-MM-DD') }}">{{ date | date('MMMM d, yyyy') }}</time>
+        {% endif %}
+      </header>
+      <div class="blog-body">
+        {{ content | safe }}
+      </div>
+      <footer class="blog-footer">
+        <div class="blog-share">
+          <span class="blog-share-label">Share:</span>
+          <a href="https://twitter.com/intent/tweet?text={{ title | urlencode }}&url={{ page.url | url | absoluteUrl }}" target="_blank" rel="noopener noreferrer" class="blog-share-link">X</a>
+          <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ page.url | url | absoluteUrl }}" target="_blank" rel="noopener noreferrer" class="blog-share-link">LinkedIn</a>
+        </div>
+        <div class="blog-comments" id="comments">
+          <p class="blog-comments-label">Comments</p>
+          {% include "partials/giscus.njk" %}
+        </div>
+        <div class="blog-contact">
+          <p>Connect: <a href="{{ site.linkedIn }}" target="_blank" rel="noopener noreferrer">LinkedIn</a> · <a href="{{ site.github }}" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+        </div>
+      </footer>
+    </article>
+  </main>
+  {% include "partials/footer.njk" %}
+  <script src="{{ '/js/main.js' | url }}"></script>
+</body>
+</html>

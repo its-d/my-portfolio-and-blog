@@ -1,0 +1,30 @@
+---
+layout: layouts/base.njk
+title: Blog
+---
+
+{% include "partials/nav.njk" %}
+<main class="blog-index">
+  <div class="blog-index-inner">
+    <h1 class="blog-index-title">#blog</h1>
+    <ul class="post-list">
+      {% for post in collections.posts %}
+      <li class="post-item">
+        <a href="{{ post.url | url }}" class="post-link">
+          <span class="post-title">{{ post.data.title }}</span>
+          {% if post.data.date %}
+          <time class="post-date" datetime="{{ post.data.date | date('YYYY-MM-DD') }}">{{ post.data.date | date('MMM d, yyyy') }}</time>
+          {% endif %}
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+    {% if collections.posts.length == 0 %}
+    <p class="post-empty">No posts yet.</p>
+    {% endif %}
+    <div class="blog-index-contact">
+      <p>Connect: <a href="{{ site.linkedIn }}" target="_blank" rel="noopener noreferrer">LinkedIn</a> · <a href="{{ site.github }}" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+    </div>
+  </div>
+</main>
+{% include "partials/footer.njk" %}

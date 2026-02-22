@@ -1,0 +1,11 @@
+<section class="skills" id="skills">
+  <h2 class="section-title">#skills</h2>
+  <div class="skills-grid">
+    {% for skill in skills %}
+    <div class="skill-item">
+      <span class="skill-icon" aria-hidden="true">{{ skill[0] }}</span>
+      <span class="skill-name">{{ skill }}</span>
+    </div>
+    {% endfor %}
+  </div>
+</section>

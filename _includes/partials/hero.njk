@@ -1,0 +1,17 @@
+<section class="hero" id="home">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <h1 class="hero-headline">{{ site.headline }}</h1>
+      <p class="hero-sub">{{ site.title }}</p>
+      <a href="#quote" class="btn btn-primary">Scroll down +</a>
+    </div>
+    <div class="hero-photo">
+      <img src="{{ '/images/hero-profile.png' | url }}" alt="{{ site.name }}" width="280" height="280" class="hero-img">
+      <p class="hero-photo-label">{{ site.photoLabel }}</p>
+      <div class="hero-links">
+        <a href="{{ site.linkedIn }}" target="_blank" rel="noopener noreferrer" class="hero-link" aria-label="LinkedIn">LinkedIn</a>
+        <a href="{{ site.github }}" target="_blank" rel="noopener noreferrer" class="hero-link" aria-label="GitHub">GitHub</a>
+      </div>
+    </div>
+  </div>
+</section>

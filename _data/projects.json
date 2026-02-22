@@ -1,0 +1,10 @@
+[
+  {
+    "name": "EKS Framework",
+    "description": "Infrastructure and automation for EKS-based workloads.",
+    "tech": ["Terraform", "EKS", "AWS"],
+    "repoUrl": "https://github.com/its-d/terraform-aws-eks-microservice-framework",
+    "demoUrl": null,
+    "image": "/images/project-placeholder.svg"
+  }
+]

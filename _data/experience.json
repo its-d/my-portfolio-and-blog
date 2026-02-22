@@ -1,0 +1,47 @@
+[
+  {
+    "company": "Independent Consulting",
+    "title": "Contractor",
+    "dates": "August 2025 – Present",
+    "location": "Remote",
+    "bullets": [
+      "Provided technical diagnostic and incident response services for small business clients",
+      "Identified WooCommerce Store API bot exploits and guided client through Cloudflare edge security implementation, resulting in zero fraudulent orders post-resolution",
+      "Conducted systematic root cause analysis resolving 503 production error through plugin isolation, PHP-level debugging, and WooCommerce query analysis"
+    ]
+  },
+  {
+    "company": "Amazon Web Services (AWS)",
+    "title": "Cloud Consultant",
+    "dates": "December 2020 – August 2025",
+    "location": "Arlington, VA",
+    "bullets": [
+      "Led design and implementation of serverless ETL pipeline architecture using AWS Step Functions, Amazon EventBridge, Amazon ECS Fargate, and Docker Containers",
+      "Engineered CI/CD automation framework using GitLab CI/CD and AWS CDK, resulting in 94% reduction in manual operations and standardized IaC practices",
+      "Architected and implemented enterprise data lake solution using AWS CDK with multi-stage (Bronze/Silver/Gold) data processing architecture",
+      "Established technical enablement artifacts reaching more than 4,400 AWS employees globally; conducted hands-on workshops and technical panels"
+    ]
+  },
+  {
+    "company": "General Dynamics Information Technology (GDIT)",
+    "title": "Applications Developer",
+    "dates": "April 2019 – December 2020",
+    "location": "Falls Church, VA",
+    "bullets": [
+      "Led AWS infrastructure operations: RDS optimization, SQS monitoring, S3 security, CloudWatch alerting",
+      "Developed Java-based microservices and REST APIs integrated with MySQL; automated CI/CD and coding standards",
+      "Architected test automation framework using Selenium and JUnit, reducing regression testing time by 60%"
+    ]
+  },
+  {
+    "company": "SCLogic",
+    "title": "Software Support Analyst",
+    "dates": "March 2018 – April 2019",
+    "location": "Annapolis, MD",
+    "bullets": [
+      "Collaborated with backend team implementing enterprise software using SQL Server, stored procedures, and query optimization",
+      "Led technical troubleshooting of client systems, resolving server-to-server and database connectivity issues while maintaining 24-hour SLA",
+      "Delivered on-site implementations, data migrations, and training for customer success teams"
+    ]
+  }
+]

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="220" viewBox="0 0 400 220" fill="none">
+  <rect width="400" height="220" fill="#0f1419"/>
+  <rect x="1" y="1" width="398" height="218" stroke="rgba(242,103,34,0.3)" stroke-width="1" fill="none" rx="4"/>
+  <text x="200" y="115" text-anchor="middle" fill="#8b949e" font-family="system-ui,sans-serif" font-size="14">Project image</text>
+</svg>
