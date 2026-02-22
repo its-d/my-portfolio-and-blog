@@ -397,15 +397,70 @@ section {
 
 /* Footer */
 .site-footer {
+  border-top: 1px solid var(--border);
+  margin-top: 0;
+}
+
+.site-footer-columns .footer-inner {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem 1.5rem;
+  padding: 2.5rem 1.5rem 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+}
+
+@media (max-width: 768px) {
+  .site-footer-columns .footer-inner {
+    grid-template-columns: 1fr;
+  }
+}
+
+.footer-col-title {
+  font-size: 1rem;
+  margin: 0 0 0.75rem;
+  color: var(--text);
+}
+
+.footer-about-text {
+  margin: 0 0 1rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.footer-github {
+  font-size: 0.9rem;
+}
+
+.footer-cat-list,
+.footer-links-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-cat-list li,
+.footer-links-list li {
+  margin-bottom: 0.35rem;
+}
+
+.footer-cat-list a,
+.footer-links-list a {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.footer-cat-list a:hover,
+.footer-links-list a:hover {
+  color: var(--accent);
+}
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem 2rem;
   border-top: 1px solid var(--border);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 1rem;
 }
 
 .footer-copy {
@@ -430,7 +485,7 @@ section {
 
 /* Blog index */
 .blog-index {
-  max-width: 800px;
+  max-width: 1100px;
   margin: 0 auto;
   padding: 3rem 1.5rem;
 }
@@ -441,49 +496,113 @@ section {
   margin: 0 0 1.5rem;
 }
 
-.post-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.blog-categories {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1rem;
 }
 
-.post-item {
-  margin-bottom: 0.75rem;
+.blog-categories-label {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-right: 0.25rem;
 }
 
-.post-link {
-  display: block;
-  padding: 0.75rem;
+.blog-category-link {
+  font-size: 0.9rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  background: var(--card-bg);
   border: 1px solid var(--border);
-  border-radius: 6px;
-  color: var(--text);
+  color: var(--text-muted);
 }
 
-.post-link:hover {
+.blog-category-link:hover,
+.blog-category-link.active {
   border-color: var(--accent);
   color: var(--accent);
 }
 
-.post-title {
+.post-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+.post-card {
+  margin: 0;
+}
+
+.post-card-link {
+  display: block;
+  height: 100%;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  color: var(--text);
+  transition: border-color 0.2s;
+}
+
+.post-card-link:hover {
+  border-color: var(--accent);
+}
+
+.post-card-image-wrap {
+  aspect-ratio: 16/9;
+  background: var(--bg-soft);
+  overflow: hidden;
+}
+
+.post-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.post-card-image-placeholder {
+  width: 100%;
+  height: 100%;
+  background: var(--bg-soft);
+}
+
+.post-card-body {
+  padding: 1.25rem;
+}
+
+.post-card-title {
+  font-size: 1.1rem;
+  margin: 0 0 0.35rem;
   font-weight: 600;
 }
 
-.post-date {
+.post-card-date {
   display: block;
   font-size: 0.85rem;
   color: var(--text-muted);
-  margin-top: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.post-card-summary {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin: 0 0 0.75rem;
+  line-height: 1.45;
+}
+
+.post-card-cta {
+  display: inline-block;
+  font-size: 0.9rem;
+  padding: 0.35rem 0.75rem;
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  color: var(--accent);
 }
 
 .post-empty {
-  color: var(--text-muted);
-}
-
-.blog-index-contact {
-  margin-top: 2rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid var(--border);
-  font-size: 0.95rem;
   color: var(--text-muted);
 }
 
@@ -495,7 +614,6 @@ section {
 }
 
 .blog-article {
-  border-bottom: 1px solid var(--border);
   padding-bottom: 2rem;
 }
 
@@ -506,22 +624,60 @@ section {
 .blog-title {
   font-size: 1.75rem;
   margin: 0 0 0.5rem;
+  color: var(--text);
 }
 
-.blog-date {
+.blog-summary {
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin: 0 0 0.75rem;
+  line-height: 1.5;
+}
+
+.blog-meta {
   font-size: 0.9rem;
   color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.blog-meta-by a,
+.blog-cat-tag {
+  color: var(--accent);
+}
+
+.blog-cat-tag {
+  text-decoration: underline;
+}
+
+.blog-hero-image-wrap {
+  margin: 1rem 0 1.5rem;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.blog-hero-image {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .blog-body {
   color: var(--text-muted);
 }
 
-.blog-body h2 { font-size: 1.25rem; margin: 1.5rem 0 0.5rem; }
-.blog-body h3 { font-size: 1.1rem; margin: 1.25rem 0 0.5rem; }
+.blog-body strong {
+  font-weight: 700;
+  text-decoration: underline;
+  color: var(--text);
+}
+
+.blog-body h2 { font-size: 1.25rem; margin: 1.5rem 0 0.5rem; color: var(--text); }
+.blog-body h3 { font-size: 1.1rem; margin: 1.25rem 0 0.5rem; color: var(--text); }
 .blog-body p { margin: 0 0 1rem; }
 .blog-body ul, .blog-body ol { margin: 0 0 1rem; padding-left: 1.5rem; }
 .blog-body a { color: var(--accent); }
+.blog-body blockquote { margin: 1rem 0; padding-left: 1rem; border-left: 3px solid var(--accent); color: var(--text-muted); }
 
 .blog-footer {
   margin-top: 2rem;
@@ -557,8 +713,45 @@ section {
   color: var(--text-muted);
 }
 
-.blog-contact {
-  margin-top: 1.5rem;
+.blog-about-author {
+  margin: 2rem 0 1.5rem;
+  padding: 1.25rem;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.blog-about-title {
+  font-size: 1rem;
+  margin: 0 0 0.75rem;
+  color: var(--text);
+}
+
+.blog-about-inner {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.blog-about-photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+.blog-about-text {
   font-size: 0.9rem;
   color: var(--text-muted);
+}
+
+.blog-about-text p {
+  margin: 0 0 0.5rem;
+}
+
+.blog-about-text a {
+  margin-right: 0.75rem;
+  font-size: 0.9rem;
 }

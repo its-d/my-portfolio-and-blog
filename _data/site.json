@@ -1,6 +1,6 @@
 {
   "name": "Darian",
-  "title": "AWS Platform Engineer & DevOps Consultant",
+  "title": "AWS Cloud Consultant & DevOps Engineer",
   "headline": "I lead cloud migrations, win client projects, and ship infrastructure that scales",
   "photoLabel": "A sponge for information, learning and sharing what I build.",
   "linkedIn": "https://www.linkedin.com/in/darian-873/",
@@ -9,5 +9,10 @@
   "resumeDownloadName": "darian_resume.pdf",
   "quote": "You don't have to be an expert to start. You become one by starting.",
   "quoteAttribution": "A Daily Reminder",
-  "year": 2026
+  "year": 2026,
+  "authorName": "its-d",
+  "authorFullName": "Darian Lee",
+  "authorBioShort": "AWS Certified DevOps Engineer — build reliable, automated infrastructure that ships.",
+  "authorBioFooter": "AWS Certified DevOps Engineer with experience leading Infrastructure as Code and modernization initiatives. I focus on designing serverless architectures and helping teams adopt cloud with confidence.",
+  "githubUsername": "its-d"
 }
