@@ -808,16 +808,26 @@ body.page-blog .footer-col {
   color: var(--text);
 }
 
-.blog-body h2 { font-size: 1.25rem; margin: 1.5rem 0 0.5rem; color: var(--text); }
-.blog-body h3 { font-size: 1.15rem; margin: 1.5rem 0 0.5rem; color: var(--text); font-weight: 700; }
-.blog-body h4 {
-  font-size: 1.05rem;
+.blog-body h2 {
+  font-size: 1.25rem;
+  margin: 1.5rem 0 0.5rem;
+  color: var(--text);
+  font-weight: 700;
+  padding: 0.5rem 0 0.5rem 0.75rem;
+  border-left: 4px solid var(--accent);
+  background: rgba(239, 57, 36, 0.15);
+}
+.blog-body h3 {
+  font-size: 1.15rem;
   margin: 1.35rem 0 0.4rem;
   color: var(--text);
   font-weight: 700;
-  padding: 0.4rem 0 0.4rem 0.75rem;
-  border-left: 3px solid var(--accent);
-  background: rgba(239, 57, 36, 0.06);
+}
+.blog-body h4 {
+  font-size: 1.05rem;
+  margin: 1.25rem 0 0.4rem;
+  color: var(--text);
+  font-weight: 700;
 }
 .blog-body p { margin: 0 0 1rem; }
 .blog-body ul, .blog-body ol { margin: 0 0 1rem; padding-left: 1.5rem; }
