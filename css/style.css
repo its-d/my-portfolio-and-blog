@@ -401,6 +401,11 @@ section {
   object-fit: contain;
 }
 
+/* Burn white to black so colored logos sit on dark; skip for dark icons (e.g. GitHub) */
+.skill-icon-wrap .skill-icon-img--multiply {
+  mix-blend-mode: multiply;
+}
+
 .skill-icon-wrap .skill-icon {
   font-size: 1.5rem;
   color: var(--text);
