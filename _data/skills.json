@@ -8,5 +8,5 @@
   { "name": "Docker", "icon": "/images/blog/skills/docker.jpg" },
   { "name": "Linux", "icon": "/images/blog/skills/linux.jpg" },
   { "name": "SQL", "icon": "/images/blog/skills/sql.jpg" },
-  { "name": "Agile", "icon": "/images/blog/skills/agile.jpg" }
+  { "name": "Agile", "icon": "/images/blog/skills/agile.png" }
 ]
