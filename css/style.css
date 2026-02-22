@@ -1,25 +1,25 @@
-/* Cyberpunk palette — neon blue main, neon pink accents */
+/* Warm dark palette — maroon/red base, orange accents */
 :root {
-  --bg: #01012b;
-  --bg-soft: #005678;
-  --text: #d1f7ff;
-  --text-muted: #05d9e8;
-  --accent: #05d9e8;
-  --accent-glow: #d1f7ff;
-  --accent-pink: #ff2a6d;
-  --border: rgba(5, 217, 232, 0.25);
-  --card-bg: rgba(0, 86, 120, 0.5);
-  --image-frame: rgba(209, 247, 255, 0.08);
+  --bg: #280905;
+  --bg-soft: #740A03;
+  --text: #f5eae8;
+  --text-muted: #c49c92;
+  --accent: #E6501B;
+  --accent-glow: #ff6b3d;
+  --accent-pink: #C3110C;
+  --border: rgba(230, 80, 27, 0.3);
+  --card-bg: rgba(116, 10, 3, 0.6);
+  --image-frame: rgba(230, 80, 27, 0.1);
 }
 
-/* Blog page — same palette, distinct blocks */
+/* Blog page — same palette */
 body.page-blog {
-  --border: rgba(5, 217, 232, 0.25);
-  --card-bg: rgba(0, 86, 120, 0.5);
+  --border: rgba(230, 80, 27, 0.3);
+  --card-bg: rgba(116, 10, 3, 0.6);
 }
 
 body.page-blog .site-header {
-  background: rgba(1, 1, 43, 0.95);
+  background: rgba(40, 9, 5, 0.95);
 }
 
 *,
@@ -67,7 +67,7 @@ a:hover {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(1, 1, 43, 0.95);
+  background: rgba(40, 9, 5, 0.95);
   border-bottom: 1px solid var(--border);
 }
 
@@ -132,7 +132,7 @@ a:hover {
 
 .btn-outline:hover {
   border-color: var(--accent);
-  background: rgba(242, 103, 34, 0.1);
+  background: rgba(230, 80, 27, 0.12);
 }
 
 /* Hero */
@@ -567,7 +567,7 @@ body.page-blog .footer-col {
 .blog-sidebar-link:hover,
 .blog-sidebar-link.active {
   color: var(--accent);
-  background: rgba(56, 139, 253, 0.08);
+  background: rgba(230, 80, 27, 0.12);
 }
 
 .blog-content {
