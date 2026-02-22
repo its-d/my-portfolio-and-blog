@@ -84,7 +84,7 @@ a:hover {
 .nav-brand {
   font-weight: 700;
   font-size: 1.25rem;
-  color: var(--accent);
+  color: var(--text);
 }
 
 .nav-links {
