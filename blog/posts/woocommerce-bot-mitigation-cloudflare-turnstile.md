@@ -101,8 +101,10 @@ After implementing Cloudflare Turnstile and re-enabling fixed-price books:
 
 ## Client Testimonial
 
+<div class="client-testimonial">
 > "I met Darian through a mutual contact when the organization I steward was in a vulnerable moment with our web security. Darian was a patient communicator, and was flexible with the timing, needs, and budget of our organization. When the fix he identified for our website was much easier than we initially worried it might be, he acted with integrity and helped us fix it ourselves. While I hope my organization's website will continue to run smoothly, I appreciated working with Darian and will do so again should the need arise."
 > — Swedish-American Historical Society
+</div>
 
 ## Closing Thoughts
 
@@ -110,4 +112,4 @@ This was a great example of how even a small configuration change combined with 
 
 If you're facing similar traffic anomalies, bot activity, or checkout instability on WordPress/WooCommerce, feel free to reach out — I'm always happy to help troubleshoot or harden your setup.
 
-**Keywords:** Cloudflare, Bot Mitigation, WordPress security, WooCommerce Store API, PayPal Advanced Card Processing, Checkout Fraud, Incident Response, Website Performance
+**Keywords:** <span class="blog-keywords">Cloudflare, Bot Mitigation, WordPress security, WooCommerce Store API, PayPal Advanced Card Processing, Checkout Fraud, Incident Response, Website Performance</span>
