@@ -1,18 +1,18 @@
 [
   {
     "name": "EKS Framework",
-    "description": "Infrastructure and automation for EKS-based workloads.",
-    "tech": ["Terraform", "EKS", "AWS"],
+    "description": "A Terraform-based framework for deploying microservices on Amazon EKS with Fargate. Includes automated CI pipelines, Helm-based add-ons, and a preconfigured Grafana stack for monitoring and observability.",
+    "tech": ["Terraform", "Kubernetes", "helm", "Grafana", "AWS", "IaC"],
     "repoUrl": "https://github.com/its-d/terraform-aws-eks-microservice-framework",
     "demoUrl": null,
-    "image": "/images/projects/eks_framework.png"
+    "image": "/images/projects/terraform-aws-eks-microservice-framework.png"
   },
   {
     "name": "Secure Cloud Baseline",
-    "description": "Secure AWS baseline for those new to the Cloud.",
-    "tech": ["Terraform", "Security", "AWS"],
+    "description": "A production-ready AWS secure baseline built with Terraform. Logging, IAM, GuardDuty, and optional VPC; deployable in under an hour. Built for startups that can't afford to get security wrong.",
+    "tech": ["Terraform", "Security", "AWS", "IaC"],
     "repoUrl": "https://github.com/its-d/secure-cloud-baseline",
     "demoUrl": null,
-    "image": "/images/projects/secure_cloud_baseline.png"
+    "image": "/images/projects/secure-cloud-baseline.png"
   }
 ]
