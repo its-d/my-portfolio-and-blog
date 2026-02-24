@@ -288,12 +288,16 @@ section {
 .project-image-wrap {
   aspect-ratio: 16/9;
   background: var(--bg-soft);
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .project-image {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .project-tech {
