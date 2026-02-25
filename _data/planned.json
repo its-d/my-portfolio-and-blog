@@ -1,3 +1,5 @@
 [
-  { "name": "Secure Cloud Baseline (WIP)", "description": "A Terraform-based framework for creating secure, scalable, and compliant cloud infrastructure." }
+  { "name": "commit-guard", "description": "Plug-and-play pre-commit security pipeline that automatically scans for secrets, linting errors, and IaC misconfigurations before any code reaches your repo." },
+  { "name": "console-to-code", "description": "Browser extension that detects what you're doing in the AWS console and suggests the equivalent Terraform or CLI command in a sidebar in real time." },
+  { "name": "repo-intel-bot", "description": "Microsoft Teams bot that lets your team mention a repository and ask questions about specific areas of the codebase, returning contextual answers directly in the thread." }
 ]
