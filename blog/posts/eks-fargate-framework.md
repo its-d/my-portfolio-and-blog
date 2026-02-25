@@ -70,6 +70,14 @@ Here's the high-level flow automated by the framework:
 - Sends alerts through SNS
 - Supports ephemeral dashboards for short-lived environments
 
+## Prerequisites
+
+- Terraform >= 1.5
+- AWS CLI v2
+- kubectl, Helm >= 3.8
+- jq
+- Python 3.10+ (for pre-commit)
+
 ## Quick Start
 
 To get started from scratch:
@@ -81,17 +89,20 @@ git clone https://github.com/its-d/terraform-aws-eks-microservice-framework.git
 cd terraform-aws-eks-microservice-framework
 ```
 
-**Prepare your environment**
+**Copy and edit config**
 
-- Create `env/dev/backend.hcl` and `env/dev/terraform.tfvars` (examples included)
-- Confirm your public IP: `make _confirm_ip`  
-  This step restricts EKS API access to your current IP, preventing accidental 0.0.0.0/0 exposure.
+```bash
+cp terraform.tfvars.example terraform.tfvars
+cp backend.hcl.example backend.hcl
+# Edit terraform.tfvars: set region, identifier
+# Edit backend.hcl: set bucket, key, region
+```
 
 **Deploy**
 
 ```bash
 make init
-make plan
+make plan   # Prompts for Grafana credentials if not set
 make apply
 ```
 
@@ -99,15 +110,16 @@ make apply
 
 ```bash
 make outputs
+make grafana-url   # Grafana access info
 ```
 
-You'll receive the cluster name, ALB endpoints, and Grafana URLs after deployment.
+You'll receive the cluster name, ALB endpoints, and Grafana URLs after deployment. For Grafana, you can also get the URL from AWS Console → EC2 → Load Balancers (ALB for `monitoring` namespace).
 
-## Why _confirm_ip Exists
+## Restricting EKS API Access
 
-Terraform and Helm both need to reach the EKS API endpoint during apply. If your IP isn't listed in `public_access_cidrs`, you'll hit TLS handshake or timeout errors.
+By default, `public_access_cidrs` is `["0.0.0.0/0"]`. Use `make confirm-ip` to restrict EKS API access to your current IP. Terraform and Helm both need to reach the EKS API endpoint during apply — if your IP isn't listed in `public_access_cidrs`, you'll hit TLS handshake or timeout errors.
 
-The `_confirm_ip` helper ensures:
+The `make confirm-ip` helper ensures:
 
 - You never expose the cluster to the entire internet
 - You always know which IP is allowed
@@ -120,12 +132,12 @@ It's a small but critical step that prevents accidental misconfiguration and kee
 - **Use OIDC for GitHub Actions:** never store long-lived AWS keys.
 - **Adopt IRSA everywhere:** each controller or workload gets its own IAM role.
 - **Enable observability early:** Grafana and CloudWatch should be part of the MVP, not an afterthought.
-- **Destroy safely:** always remove Helm workloads before `terraform destroy` to avoid dependency conflicts.
+- **Destroy safely:** use `make destroy` — it runs pre-cleanup (Helm uninstall, K8s resources, VPC endpoints, ALBs, ENIs; removes Helm/K8s from state), then terraform destroy. No manual steps required. If VPC DependencyViolation occurs, run `make destroy-retry`.
 
 ## Lessons Learned
 
 - Start small: one namespace, one CI pipeline. Kubernetes and Terraform complexity compounds quickly.
-- Confirm your IP before every apply, especially if you're using a VPN.
+- Run `make confirm-ip` before every apply if restricting access, especially when using a VPN.
 - Don't skip metrics: debugging Fargate pods without logs or dashboards is brutal.
 - Validate OIDC trust relationships in IAM before running CI/CD pipelines.
 - Match namespace selectors carefully when defining Fargate profiles — it's an easy mistake to overlook.
