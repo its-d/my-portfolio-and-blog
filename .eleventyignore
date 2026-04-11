@@ -1,3 +1,5 @@
 docs/
 README.md
 node_modules/
+.claude/
+.git/
