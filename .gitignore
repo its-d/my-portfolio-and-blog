@@ -30,3 +30,9 @@ npm-debug.log*
 .cache/
 tmp/
 temp/
+
+# Source photo originals — too large to commit; only optimized web versions go in /images/self/
+images/self/IMG_*.jpg
+images/self/IMG_*.png
+images/self/*_wout_background.png
+!images/self/hero-darian.png
