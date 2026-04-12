@@ -323,7 +323,12 @@ a:hover {
 .hero-typewriter-cursor {
   display: inline-block;
   margin-left: 0.1ch;
-  animation: typewriter-blink 1s step-end infinite;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .hero-typewriter-cursor {
+    animation: typewriter-blink 1s step-end infinite;
+  }
 }
 
 @keyframes typewriter-blink {
@@ -501,33 +506,6 @@ a:hover {
   border: 0;
 }
 
-/* Quote */
-.quote {
-  padding: 3rem 1.5rem;
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-  background: linear-gradient(180deg, transparent 0%, rgba(242, 103, 34, 0.03) 50%, transparent 100%);
-}
-
-.quote-block {
-  margin: 0;
-}
-
-.quote-text {
-  font-size: 1.35rem;
-  font-style: italic;
-  color: var(--text);
-  margin: 0 0 0.5rem;
-}
-
-.quote-attribution {
-  font-size: 0.95rem;
-  color: var(--text-muted);
-  font-style: normal;
-}
 
 /* Sections common */
 section {
@@ -1095,19 +1073,6 @@ body.page-blog .footer-col {
   color: var(--text-muted);
 }
 
-.footer-links {
-  display: flex;
-  gap: 1rem;
-}
-
-.footer-links a {
-  color: var(--text-muted);
-  font-size: 0.9rem;
-}
-
-.footer-links a:hover {
-  color: var(--accent);
-}
 
 /* Footer — motto + latest writing column */
 .footer-motto {
