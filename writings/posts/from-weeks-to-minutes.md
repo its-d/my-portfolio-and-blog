@@ -43,7 +43,7 @@ I started using it to revamp the EKS framework and build out my portfolio site. 
 
 Then reality hit.
 
-Every time I asked Cursor to make a change, it would fix one thing and break two others. I'd ask it to update an AWS resource, and it would modify the resource without considering its dependencies, triggering a chain of failures across the entire Terraform state. On the portfolio site, changing a logo on the hero section would break the page layout, reorder elements, and corrupt image formatting.
+Every time I asked Cursor to make a change, it would fix one thing and break two others. I'd ask it to update an AWS resource, and it would modify the resource without considering its dependencies, triggering a chain of failures across the entire Terraform state. On this portfolio site, changing a logo on the hero section would break the page layout, reorder elements, and corrupt image formatting.
 
 The problem wasn't the tool. The problem was me.
 
