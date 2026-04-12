@@ -10,9 +10,9 @@ title: Writing
       <div class="blog-sidebar-block">
         <h2 class="blog-sidebar-title">Filter</h2>
         <nav class="blog-sidebar-nav" aria-label="Filter by category">
-          <a href="{{ '/blog/' | url }}" class="blog-sidebar-link active" data-category="">All</a>
+          <a href="{{ '/writings/' | url }}" class="blog-sidebar-link active" data-category="">All</a>
           {% for cat in collections.categories %}
-          <a href="{{ '/blog/' | url }}?category={{ cat | urlencode }}" class="blog-sidebar-link" data-category="{{ cat }}">{{ cat | categoryLabel }}</a>
+          <a href="{{ '/writings/' | url }}?category={{ cat | urlencode }}" class="blog-sidebar-link" data-category="{{ cat }}">{{ cat | categoryLabel }}</a>
           {% endfor %}
         </nav>
       </div>
@@ -23,14 +23,10 @@ title: Writing
         {% for post in collections.posts %}
         <article class="post-card" data-categories="{{ post.data.categories | join(' ') }}">
           <a href="{{ post.url | url }}" class="post-card-link">
-            <div class="post-card-image-wrap">
-              {% if post.data.image %}
-              <img src="{{ ('/' + post.data.image) | url | absoluteUrl }}" alt="" class="post-card-image" width="400" height="220">
-              {% else %}
-              <div class="post-card-image post-card-image-placeholder"></div>
-              {% endif %}
-            </div>
             <div class="post-card-body">
+              {% if post.data.categories and post.data.categories.length %}
+              <span class="pill post-card-badge">{{ post.data.categories[0] | replace("_", " ") }}</span>
+              {% endif %}
               <h2 class="post-card-title">{{ post.data.title }}</h2>
               {% if post.data.date %}
               <time class="post-card-date" datetime="{{ post.data.date | date('YYYY-MM-DD') }}">{{ post.data.date | date('MMM d, yyyy') }}</time>
@@ -38,7 +34,7 @@ title: Writing
               {% if post.data.summary %}
               <p class="post-card-summary">{{ post.data.summary }}</p>
               {% endif %}
-              <span class="post-card-cta">Read</span>
+              <span class="post-card-cta">Read →</span>
             </div>
           </a>
         </article>

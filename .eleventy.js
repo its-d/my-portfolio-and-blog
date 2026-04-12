@@ -7,11 +7,11 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("resume.pdf");
 
   eleventyConfig.addCollection("posts", function (collectionApi) {
-    return collectionApi.getFilteredByGlob("blog/posts/*.md").reverse();
+    return collectionApi.getFilteredByGlob("writings/posts/*.md").reverse();
   });
 
   eleventyConfig.addCollection("categories", function (collectionApi) {
-    const posts = collectionApi.getFilteredByGlob("blog/posts/*.md");
+    const posts = collectionApi.getFilteredByGlob("writings/posts/*.md");
     const cats = new Set();
     posts.forEach((p) => {
       const c = p.data.categories;
