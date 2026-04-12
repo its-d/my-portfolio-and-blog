@@ -1,5 +1,12 @@
 [
   {
+    "title": "From Weeks to Minutes: How AI Changed the Way I Build",
+    "summary": "My journey from manual everything to fully AI-assisted development, and what it means for shipping faster.",
+    "type": "blog",
+    "status": "coming-soon",
+    "slug": null
+  },
+  {
     "title": "Stopping WooCommerce Checkout Bots at the Edge",
     "summary": "How I traced a Cloudflare Turnstile misconfig back to the edge layer and shipped a zero-fraud fix.",
     "type": "case study",
@@ -12,13 +19,6 @@
     "type": "guide",
     "status": "published",
     "slug": "/writings/posts/eks-fargate-framework/"
-  },
-  {
-    "title": "From Weeks to Minutes: How AI Changed the Way I Build",
-    "summary": "My journey from manual everything to fully AI-assisted development, and what it means for shipping faster.",
-    "type": "blog",
-    "status": "coming-soon",
-    "slug": null
   },
   {
     "title": "AI-Powered Interview Prep: Personal Plans from Job Descriptions",
