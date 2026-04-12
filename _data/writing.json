@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Stopping WooCommerce Checkout Bots at the Edge",
+    "summary": "How I traced a Cloudflare Turnstile misconfig back to the edge layer and shipped a zero-fraud fix.",
+    "type": "case study",
+    "status": "published",
+    "slug": "/blog/posts/woocommerce-bot-mitigation-cloudflare-turnstile/"
+  },
+  {
+    "title": "Deploying EKS on AWS Fargate — A Cleaner Way to Run Containers",
+    "summary": "A hands-on look at deploying a production-ready EKS Fargate framework with Terraform and GitHub Actions.",
+    "type": "guide",
+    "status": "published",
+    "slug": "/blog/posts/eks-fargate-framework/"
+  },
+  {
+    "title": "AI-Powered Interview Prep: Personal Plans from Job Descriptions",
+    "summary": "Generating day-by-day study plans, flashcards, and practice questions from any job posting.",
+    "type": "case study",
+    "status": "coming-soon",
+    "slug": null
+  },
+  {
+    "title": "iac-to-diagram: From IaC Text to Interactive Architecture",
+    "summary": "Building a tool that turns Terraform, CDK, and CloudFormation into accurate diagrams nobody has to redraw.",
+    "type": "guide",
+    "status": "coming-soon",
+    "slug": null
+  }
+]
