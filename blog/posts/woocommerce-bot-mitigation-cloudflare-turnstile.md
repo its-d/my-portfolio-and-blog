@@ -7,7 +7,7 @@ description: A non-profit's e-commerce store was hit by fraudulent checkout atte
 image: images/blog/woocommerce-bot-hero.png
 categories:
   - case_study
-  - incident_response
+  - security
 ---
 
 A non-profit's e-commerce store began experiencing a **sudden surge of fraudulent checkout attempts**, overwhelming their book-ordering system and forcing them to temporarily disable online sales. I was brought in to **diagnose the issue, identify the underlying cause, and implement a solution** that would **restore stable operations** without disrupting the rest of their website.

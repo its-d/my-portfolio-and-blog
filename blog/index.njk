@@ -1,6 +1,6 @@
 ---
 layout: layouts/base.njk
-title: Blog
+title: Writing
 ---
 
 {% include "partials/nav.njk" %}
@@ -8,7 +8,7 @@ title: Blog
   <div class="blog-layout">
     <aside class="blog-sidebar">
       <div class="blog-sidebar-block">
-        <h2 class="blog-sidebar-title">Categories</h2>
+        <h2 class="blog-sidebar-title">Filter</h2>
         <nav class="blog-sidebar-nav" aria-label="Filter by category">
           <a href="{{ '/blog/' | url }}" class="blog-sidebar-link active" data-category="">All</a>
           {% for cat in collections.categories %}
@@ -18,14 +18,14 @@ title: Blog
       </div>
     </aside>
     <div class="blog-content">
-      <h1 class="blog-index-title">#blog</h1>
+      <h1 class="blog-index-title">#writing</h1>
       <div class="post-grid" id="post-grid">
         {% for post in collections.posts %}
         <article class="post-card" data-categories="{{ post.data.categories | join(' ') }}">
           <a href="{{ post.url | url }}" class="post-card-link">
             <div class="post-card-image-wrap">
               {% if post.data.image %}
-              <img src="{{ post.data.image }}" alt="" class="post-card-image" width="400" height="220">
+              <img src="{{ ('/' + post.data.image) | url | absoluteUrl }}" alt="" class="post-card-image" width="400" height="220">
               {% else %}
               <div class="post-card-image post-card-image-placeholder"></div>
               {% endif %}

@@ -6,9 +6,8 @@ summary: A hands-on look at deploying a production-ready EKS Fargate framework w
 description: A Terraform-based EKS Fargate framework for reusable, production-grade container orchestration — secure, automated, and observable.
 image: images/blog/eks-fargate-hero.png
 categories:
+  - guide
   - aws
-  - eks
-  - guides
 ---
 
 As I worked to strengthen my DevOps and infrastructure skills, I wanted to grow in both Infrastructure as Code (IaC) and container orchestration using Kubernetes. I had experience with Terraform, AWS CDK, and CloudFormation but I wanted something more cloud-agnostic, modular, and automation-focused.
