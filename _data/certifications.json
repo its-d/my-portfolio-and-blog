@@ -3,48 +3,48 @@
     "name": "AWS Certified DevOps Engineer – Professional",
     "shortName": "DevOps Pro",
     "image": "/images/certs/aws-devops-pro.png",
-    "credlyUrl": ""
+    "credlyUrl": null
   },
   {
-    "name": "AWS Certified SysOps Administrator",
+    "name": "AWS Certified SysOps Administrator – Associate",
     "shortName": "SysOps Admin",
     "image": "/images/certs/aws-sysops.png",
-    "credlyUrl": ""
+    "credlyUrl": null
   },
   {
-    "name": "AWS Certified Developer",
+    "name": "AWS Certified Developer – Associate",
     "shortName": "Developer",
     "image": "/images/certs/aws-developer.png",
-    "credlyUrl": ""
+    "credlyUrl": null
   },
   {
     "name": "AWS Certified Cloud Practitioner",
     "shortName": "Cloud Practitioner",
     "image": "/images/certs/aws-ccp.png",
-    "credlyUrl": ""
+    "credlyUrl": null
   },
   {
     "name": "AWS Certified AI Practitioner",
     "shortName": "AI Practitioner",
     "image": "/images/certs/aws-ai.png",
-    "credlyUrl": ""
+    "credlyUrl": null
   },
   {
     "name": "CompTIA Security+",
     "shortName": "Security+",
     "image": "/images/certs/comptia-secplus.png",
-    "credlyUrl": ""
+    "credlyUrl": null
   },
   {
     "name": "HashiCorp Terraform Associate",
     "shortName": "Terraform Associate",
     "image": "/images/certs/hashicorp-tf.png",
-    "credlyUrl": ""
+    "credlyUrl": null
   },
   {
     "name": "Microsoft Azure Fundamentals (AZ-900)",
     "shortName": "Azure Fundamentals",
     "image": "/images/certs/msft-az900.png",
-    "credlyUrl": ""
+    "credlyUrl": null
   }
 ]
