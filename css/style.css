@@ -1,21 +1,21 @@
-/* Dark theme — black/dark bg, white text, orange accent #ef3924 */
+/* Dark theme — black/dark bg, white text, orange accent #f26722 */
 :root {
   --bg: #000000;
   --bg-soft: #1a1a1a;
   --text: #ffffff;
   --text-muted: #9ca3af;
-  --accent: #ef3924;
-  --accent-glow: #f05a4a;
-  --accent-pink: #ef3924;
-  --border: rgba(239, 57, 36, 0.25);
+  --accent: #f26722;
+  --accent-glow: #ff8a4d;
+  --accent-pink: #f26722;
+  --border: rgba(242, 103, 34, 0.25);
   --card-bg: #1a1a1a;
-  --image-frame: rgba(239, 57, 36, 0.1);
+  --image-frame: rgba(242, 103, 34, 0.1);
 }
 
 /* Blog page — dark cards */
 body.page-blog {
   --bg-soft: #1a1a1a;
-  --border: rgba(239, 57, 36, 0.25);
+  --border: rgba(242, 103, 34, 0.25);
   --card-bg: #1a1a1a;
 }
 
@@ -154,7 +154,7 @@ a:hover {
 
 .btn-outline:hover {
   border-color: var(--accent);
-  background: rgba(239, 57, 36, 0.12);
+  background: rgba(242, 103, 34, 0.12);
 }
 
 /* Hero */
@@ -228,7 +228,7 @@ a:hover {
   text-align: center;
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
-  background: linear-gradient(180deg, transparent 0%, rgba(239, 57, 36, 0.03) 50%, transparent 100%);
+  background: linear-gradient(180deg, transparent 0%, rgba(242, 103, 34, 0.03) 50%, transparent 100%);
 }
 
 .quote-block {
@@ -281,7 +281,7 @@ section {
 }
 .project-card:hover {
   border-color: var(--accent);
-  box-shadow: 0 0 0 1px rgba(239, 57, 36, 0.2);
+  box-shadow: 0 0 0 1px rgba(242, 103, 34, 0.2);
   transform: translateY(-3px);
 }
 
@@ -391,7 +391,7 @@ section {
 
 .skill-item:hover {
   border-color: var(--accent);
-  box-shadow: 0 0 0 1px rgba(239, 57, 36, 0.25);
+  box-shadow: 0 0 0 1px rgba(242, 103, 34, 0.25);
   transform: translateY(-3px);
 }
 
@@ -511,7 +511,7 @@ section {
 
 .cert-item:hover {
   border-color: var(--accent);
-  box-shadow: 0 0 0 1px rgba(239, 57, 36, 0.25);
+  box-shadow: 0 0 0 1px rgba(242, 103, 34, 0.25);
   transform: translateY(-3px);
 }
 
@@ -695,7 +695,7 @@ body.page-blog .footer-col {
 .blog-sidebar-link:hover,
 .blog-sidebar-link.active {
   color: var(--accent);
-  background: rgba(239, 57, 36, 0.12);
+  background: rgba(242, 103, 34, 0.12);
 }
 
 .blog-content {
@@ -889,7 +889,7 @@ body.page-blog .footer-col {
   font-weight: 700;
   padding: 0.5rem 0 0.5rem 0.75rem;
   border-left: 4px solid var(--accent);
-  background: rgba(239, 57, 36, 0.15);
+  background: rgba(242, 103, 34, 0.15);
 }
 .blog-body h3 {
   font-size: 1.15rem;
