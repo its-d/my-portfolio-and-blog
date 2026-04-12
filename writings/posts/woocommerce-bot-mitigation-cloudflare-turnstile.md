@@ -4,7 +4,7 @@ title: Stopping WooCommerce Checkout Bots — Cloudflare Turnstile at the Edge
 date: 2025-01-15
 summary: A technical recap of the issue, root-cause investigation, and mitigation steps taken to resolve a bot-attack disruption and reinforce long-term website stability.
 description: A non-profit's e-commerce store was hit by fraudulent checkout attempts. Here's how we diagnosed the WooCommerce Store API exploit and restored stability with Cloudflare Turnstile.
-image: images/blog/woocommerce-bot-hero.png
+image: images/writings/woocommerce-bot-hero.png
 categories:
   - case_study
   - security

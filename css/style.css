@@ -697,79 +697,27 @@ section {
   color: var(--text-muted);
 }
 
-/* Skills – 5 per row, reference style: light border, more black space between */
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 2.25rem;
-  width: 100%;
-}
-
-@media (max-width: 600px) {
-  .skills-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-  }
-}
-
-.skill-item {
+/* Skills — text-based pill grid */
+.skills-pill-grid {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  width: 100px;
-  aspect-ratio: 1 / 1;
-  margin: 0 auto;
-  padding: 0.75rem;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.skill-pill {
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
   background: var(--card-bg);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s ease;
-}
-
-.skill-item:hover {
-  border-color: var(--accent);
-  box-shadow: 0 0 0 1px rgba(252, 191, 30, 0.25);
-  transform: translateY(-3px);
-}
-
-/* Square icon area – keeps proportions (e.g. Python not squished), compact size */
-.skill-icon-wrap {
-  width: 56px;
-  height: 56px;
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--card-bg);
-  border-radius: 8px;
-  margin-bottom: 0.5rem;
-  overflow: hidden;
-}
-
-.skill-icon-wrap .skill-icon-img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  border-radius: 8px;
-}
-
-.skill-icon-wrap .skill-icon {
-  font-size: 1.5rem;
   color: var(--text);
+  border-color: var(--border);
+  cursor: default;
 }
 
-.skill-name {
-  font-size: 0.85rem;
-  text-align: center;
-  font-weight: normal;
-  color: var(--text-muted);
-  text-transform: lowercase;
-  transition: color 0.2s ease;
-}
-
-.skill-item:hover .skill-name {
-  color: var(--text);
+.skill-pill:hover {
+  border-color: var(--accent-pink);
+  box-shadow: 0 0 8px rgba(233, 30, 140, 0.25);
+  transform: translateY(-2px);
+  color: var(--accent-pink);
 }
 
 .skills-row-label {

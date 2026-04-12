@@ -4,7 +4,7 @@ title: Deploying EKS on AWS Fargate — A Cleaner Way to Run Containers
 date: 2025-02-01
 summary: A hands-on look at deploying a production-ready EKS Fargate framework with Terraform and GitHub Actions — fully serverless, secure, and CI-friendly.
 description: A Terraform-based EKS Fargate framework for reusable, production-grade container orchestration — secure, automated, and observable.
-image: images/blog/eks-fargate-hero.png
+image: images/writings/eks-fargate-hero.png
 categories:
   - guide
   - aws
