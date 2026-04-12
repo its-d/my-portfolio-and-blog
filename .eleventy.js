@@ -45,10 +45,11 @@ module.exports = function (eleventyConfig) {
     }
   });
 
-  // Category slug → display label: replace _ with space, title-case (e.g. case_study → Case Study)
+  // Category slug → display label: replace _ with space, title-case, preserve acronyms
+  const acronyms = { ai: "AI", aws: "AWS", iac: "IaC" };
   eleventyConfig.addFilter("categoryLabel", function (str) {
     if (!str || typeof str !== "string") return "";
-    return str.replace(/_/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
+    return str.replace(/_/g, " ").split(" ").map((w) => acronyms[w.toLowerCase()] || w.charAt(0).toUpperCase() + w.slice(1)).join(" ");
   });
 
   return {
