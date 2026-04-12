@@ -10,6 +10,7 @@
   --border: rgba(242, 103, 34, 0.25);
   --card-bg: #1a1a1a;
   --image-frame: rgba(242, 103, 34, 0.1);
+  --font-mono: ui-monospace, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
 }
 
 /* Blog page — dark cards */
