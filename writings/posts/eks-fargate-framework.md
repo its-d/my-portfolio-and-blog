@@ -50,18 +50,20 @@ Here's the high-level flow automated by the framework:
 
 **Terraform**
 
-- Provisions VPC, subnets, and the EKS cluster
+- Provisions VPC, subnets, and the EKS cluster (Fargate-only, no EC2 workers)
 - Configures Fargate profiles for system and application namespaces
-- Attaches IAM Roles for Service Accounts (IRSA)
+- Attaches IAM Roles for Service Accounts (IRSA) for least-privilege access
 - Installs the AWS Load Balancer Controller via Helm
-- Deploys a preconfigured Grafana instance for monitoring
+- Deploys Grafana with Secrets Manager credential handling and optional HTTPS via ACM
+- Supports multi-environment deployments (dev, stage, prod) through isolated config directories
 
 **GitHub Actions (CI/CD)**
 
-- Runs lint, format, and `terraform validate` checks
-- Generates Terraform plan artifacts with manual approval steps
-- Uses OIDC authentication (no static AWS credentials)
-- Optionally runs tfsec and Trivy for security scanning
+- Runs pre-commit hooks with lint, format, and security scanning (tfsec, Trivy)
+- Validates Terraform config and runs module tests
+- Generates plan artifacts on pull requests for review
+- Runs entirely without AWS credentials in CI (no OIDC or static keys needed for validation)
+- Includes SHA256 integrity verification for downloaded CLI tools
 
 **Grafana + CloudWatch**
 
@@ -71,10 +73,11 @@ Here's the high-level flow automated by the framework:
 
 ## Security and Best Practices
 
-- **Use OIDC for GitHub Actions:** never store long-lived AWS keys.
-- **Adopt IRSA everywhere:** each controller or workload gets its own IAM role.
+- **Adopt IRSA everywhere:** each controller or workload gets its own scoped IAM role. No shared credentials.
+- **Use Secrets Manager for credentials:** Grafana admin credentials are stored in Secrets Manager, not in config files or environment variables.
 - **Enable observability early:** Grafana and CloudWatch should be part of the MVP, not an afterthought.
-- **Destroy safely:** the framework includes automated teardown that handles dependency ordering. See the repo README for details.
+- **Isolate environments:** the framework supports separate config directories per environment (dev, stage, prod) to prevent cross-environment drift.
+- **Destroy safely:** the framework includes a 4-stage automated teardown (Helm cleanup, state removal, destroy, VPC force-delete). See the repo README for details.
 
 ## Lessons Learned
 
