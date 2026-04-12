@@ -2,49 +2,49 @@
   {
     "name": "AWS Certified DevOps Engineer – Professional",
     "shortName": "DevOps Pro",
-    "image": "/images/certs/aws-devops-pro.png",
-    "credlyUrl": null
+    "image": "/images/certs/aws-certified-devops-engineer-professional.png",
+    "credlyUrl": "https://www.credly.com/badges/cc854cc4-35f1-4a85-b6cf-67c11fd0255c/public_url"
   },
   {
     "name": "AWS Certified SysOps Administrator – Associate",
     "shortName": "SysOps Admin",
-    "image": "/images/certs/aws-sysops.png",
-    "credlyUrl": null
+    "image": "/images/certs/aws-certified-sysops-administrator-associate.png",
+    "credlyUrl": "https://www.credly.com/badges/cadd2406-f858-445e-83b9-49ae28337d0d/public_url"
   },
   {
     "name": "AWS Certified Developer – Associate",
     "shortName": "Developer",
-    "image": "/images/certs/aws-developer.png",
-    "credlyUrl": null
+    "image": "/images/certs/aws-certified-developer-associate.png",
+    "credlyUrl": "https://www.credly.com/badges/d93152b5-1fd3-4e5c-ae55-4f50e91bbfc8/public_url"
   },
   {
     "name": "AWS Certified Cloud Practitioner",
     "shortName": "Cloud Practitioner",
-    "image": "/images/certs/aws-ccp.png",
-    "credlyUrl": null
+    "image": "/images/certs/aws-certified-cloud-practitioner.png",
+    "credlyUrl": "https://www.credly.com/badges/566d9f24-651a-4a90-bad0-97cc19271c2c/public_url"
   },
   {
     "name": "AWS Certified AI Practitioner",
     "shortName": "AI Practitioner",
-    "image": "/images/certs/aws-ai.png",
-    "credlyUrl": null
+    "image": "/images/certs/aws-certified-ai-practitioner.png",
+    "credlyUrl": "https://www.credly.com/badges/deb9b417-5473-40c5-ad49-a0f3247c4f0a/public_url"
   },
   {
     "name": "CompTIA Security+",
     "shortName": "Security+",
-    "image": "/images/certs/comptia-secplus.png",
-    "credlyUrl": null
+    "image": "/images/certs/comptia-security-ce-certification.png",
+    "credlyUrl": "https://www.credly.com/badges/a3cdb97f-f22b-4b6f-be1d-f567d9a189b3/public_url"
   },
   {
     "name": "HashiCorp Terraform Associate",
     "shortName": "Terraform Associate",
-    "image": "/images/certs/hashicorp-tf.png",
-    "credlyUrl": null
+    "image": "/images/certs/hashicorp-certified-terraform-associate-003.png",
+    "credlyUrl": "https://www.credly.com/badges/c9e1066e-7611-43e5-ae47-69fffe9d72b0/public_url"
   },
   {
     "name": "Microsoft Azure Fundamentals (AZ-900)",
     "shortName": "Azure Fundamentals",
-    "image": "/images/certs/msft-az900.png",
-    "credlyUrl": null
+    "image": "/images/certs/microsoft-certified-azure-fundamentals.png",
+    "credlyUrl": "https://www.credly.com/badges/ad2fbb18-a213-4375-a087-57bc949675a0/public_url"
   }
 ]
