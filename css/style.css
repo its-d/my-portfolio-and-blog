@@ -158,6 +158,54 @@ a:hover {
   background: rgba(242, 103, 34, 0.12);
 }
 
+/* Mono pill component — bracketed monospace badges, used everywhere */
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+  padding: 0.35rem 0.75rem;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--accent);
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.pill::before {
+  content: "[";
+  color: var(--text-muted);
+}
+
+.pill::after {
+  content: "]";
+  color: var(--text-muted);
+}
+
+.pill-filled {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
+.pill-filled::before,
+.pill-filled::after {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.pill-dashed {
+  border-style: dashed;
+}
+
+.pill:hover {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px rgba(242, 103, 34, 0.2);
+  transform: translateY(-1px);
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+
 /* Hero */
 .hero {
   padding: 4rem 1.5rem 5rem;
