@@ -843,6 +843,34 @@ section {
   border: 1px solid var(--border);
   border-radius: 8px;
   padding: 1.25rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.experience-card-featured {
+  padding: 1.5rem 1.75rem;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px rgba(242, 103, 34, 0.15);
+}
+
+.experience-card-compact {
+  padding: 1rem 1.25rem;
+  opacity: 0.85;
+}
+
+.experience-card-compact .exp-bullets {
+  font-size: 0.85rem;
+}
+
+.exp-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.exp-pill {
+  font-size: 0.65rem;
 }
 
 .exp-company {

@@ -1,9 +1,15 @@
 <section class="experience" id="experience">
-  <h2 class="section-title">#experience</h2>
+  <div class="section-head">
+    <h2 class="section-title">#experience</h2>
+    <p class="eyebrow eyebrow-cmd">git log --career</p>
+  </div>
   <div class="experience-list">
     {% for job in experience %}
-    <article class="experience-card">
-      <h3 class="exp-company">{{ job.company }}</h3>
+    <article class="experience-card {% if job.featured %}experience-card-featured{% else %}experience-card-compact{% endif %}">
+      <div class="exp-head">
+        <h3 class="exp-company">{{ job.company }}</h3>
+        {% if loop.first %}<span class="pill exp-pill">current</span>{% elif job.company == 'Amazon Web Services (AWS)' %}<span class="pill exp-pill">aws</span>{% endif %}
+      </div>
       <p class="exp-meta">{{ job.title }} · {{ job.dates }} · {{ job.location }}</p>
       <ul class="exp-bullets">
         {% for bullet in job.bullets %}
