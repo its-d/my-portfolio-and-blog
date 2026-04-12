@@ -1,0 +1,16 @@
+<section class="currently-building" id="currently-building">
+  <div class="section-head">
+    <h2 class="section-title">#currently-building</h2>
+    <p class="eyebrow eyebrow-cmd">ls projects/wip</p>
+  </div>
+
+  <div class="wip-grid">
+    {% for item in planned %}
+    <article class="wip-card">
+      <span class="pill pill-dashed wip-status wip-status-{{ item.status }}">{{ item.status | replace('-', ' ') }}</span>
+      <h3 class="wip-name">{{ item.name }}</h3>
+      <p class="wip-desc">{{ item.description }}</p>
+    </article>
+    {% endfor %}
+  </div>
+</section>
