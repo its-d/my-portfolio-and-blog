@@ -582,9 +582,17 @@ section {
 }
 
 .project-tech {
-  padding: 0.5rem 1rem;
-  font-size: 0.8rem;
-  color: var(--text-muted);
+  list-style: none;
+  margin: 0.75rem 1rem 0.5rem;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.project-tech-pill {
+  font-size: 0.7rem;
+  padding: 0.2rem 0.5rem;
 }
 
 .project-name {
@@ -606,38 +614,14 @@ section {
   margin: 0 1rem;
 }
 
-.planned {
-  margin-top: 2rem;
-  padding: 1.5rem;
-  background: var(--card-bg);
-  border: 1px dashed var(--border);
-  border-radius: 8px;
+.projects-more {
+  margin-top: 1.5rem;
+  text-align: right;
 }
 
-.planned-title {
-  margin: 0 0 0.25rem;
-  font-size: 1rem;
-}
-
-.planned-desc {
-  margin: 0;
-  font-size: 0.9rem;
-  color: var(--text-muted);
-}
-
-.planned-list {
-  margin: 0.5rem 0 0;
-  padding-left: 1.25rem;
-  font-size: 0.9rem;
-  color: var(--text-muted);
-}
-
-.planned-item {
-  margin-bottom: 0.35rem;
-}
-
-.planned-item strong {
-  color: var(--text);
+.projects-more a {
+  font-family: var(--font-mono);
+  color: var(--accent);
 }
 
 /* Skills – 5 per row, reference style: light border, more black space between */

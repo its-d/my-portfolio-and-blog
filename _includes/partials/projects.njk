@@ -1,33 +1,31 @@
 <section class="projects" id="projects">
   <div class="section-head">
     <h2 class="section-title">#projects</h2>
+    <p class="eyebrow eyebrow-com">shipped</p>
   </div>
+
   <div class="project-grid">
     {% for project in projects %}
     <article class="project-card">
       <div class="project-image-wrap">
-        <img src="{{ project.image | url | absoluteUrl }}" alt="" class="project-image" width="400" height="220">
+        <img src="{{ project.image }}" alt="" class="project-image" width="400" height="220">
       </div>
-      <div class="project-tech">{{ project.tech | join(" · ") }}</div>
+      <ul class="project-tech">
+        {% for tag in project.tech %}
+        <li class="pill project-tech-pill">{{ tag | lower }}</li>
+        {% endfor %}
+      </ul>
       <h3 class="project-name">{{ project.name }}</h3>
       <p class="project-desc">{{ project.description }}</p>
       <div class="project-links">
-        {% if project.repoUrl %}<a href="{{ project.repoUrl }}" target="_blank" rel="noopener noreferrer" class="btn btn-outline">View repo</a>{% endif %}
-        {% if project.demoUrl %}<a href="{{ project.demoUrl }}" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Live demo</a>{% endif %}
+        {% if project.repoUrl %}<a href="{{ project.repoUrl }}" target="_blank" rel="noopener noreferrer" class="btn btn-outline">View repo →</a>{% endif %}
+        {% if project.caseStudyUrl %}<a href="{{ project.caseStudyUrl }}" class="btn btn-outline">Read case study →</a>{% endif %}
       </div>
     </article>
     {% endfor %}
   </div>
-  <div class="planned">
-    <h3 class="planned-title">Planned</h3>
-    {% if planned and planned.length %}
-    <ul class="planned-list">
-      {% for item in planned %}
-      <li class="planned-item"><strong>{{ item.name }}</strong>{% if item.description %} — {{ item.description }}{% endif %}</li>
-      {% endfor %}
-    </ul>
-    {% else %}
-    <p class="planned-desc">More projects coming soon.</p>
-    {% endif %}
-  </div>
+
+  <p class="projects-more eyebrow eyebrow-cmd">
+    <a href="{{ site.github }}" target="_blank" rel="noopener noreferrer">ls more →</a>
+  </p>
 </section>
