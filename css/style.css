@@ -266,7 +266,7 @@ a:hover {
 .hero-grid {
   display: grid;
   grid-template-columns: 55fr 45fr;
-  min-height: 75vh;
+  min-height: 55vh;
   max-width: 1400px;
   margin: 0 auto;
   overflow: hidden;
@@ -282,7 +282,7 @@ a:hover {
 /* --- Left half --- */
 .hero-left {
   background: var(--bg);
-  padding: 4rem 3rem;
+  padding: 2.5rem 3rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -340,7 +340,7 @@ a:hover {
 .hero-cta {
   align-self: flex-start;
   font-family: var(--font-mono);
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 /* --- Stat strip --- */
