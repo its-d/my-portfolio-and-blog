@@ -271,6 +271,7 @@ a:hover {
   display: grid;
   grid-template-columns: 55fr 45fr;
   min-height: 55vh;
+  max-height: 600px;
   max-width: 1400px;
   margin: 0 auto;
   overflow: hidden;
