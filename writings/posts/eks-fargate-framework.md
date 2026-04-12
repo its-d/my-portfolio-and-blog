@@ -84,7 +84,7 @@ Here's the high-level flow automated by the framework:
 - Start small: one namespace, one CI pipeline. Kubernetes and Terraform complexity compounds quickly.
 - Restrict EKS API access to your IP before every apply, especially when using a VPN.
 - Don't skip metrics: debugging Fargate pods without logs or dashboards is brutal.
-- Validate OIDC trust relationships in IAM before running CI/CD pipelines.
+- Validate OIDC trust relationships in IAM before deploying IRSA-dependent workloads.
 - Match namespace selectors carefully when defining Fargate profiles. It's an easy mistake to overlook.
 
 ## Get Started
