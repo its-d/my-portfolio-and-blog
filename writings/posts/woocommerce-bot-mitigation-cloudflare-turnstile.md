@@ -49,9 +49,7 @@ Because only fixed-price book orders were affected and variable-priced donations
 
 ## Solution and Implementation
 
-Before implementing changes, I evaluated several mitigation options including WooCommerce's built-in rate limiting, adjusting PayPal plugin settings, and adding traditional CAPTCHAs. Because the attack was hitting the WooCommerce Store API directly, **bypassing typical browser-based protections**, the most effective solution needed to filter traffic before it reached WordPress at all. **Cloudflare** offered the strongest **edge-level protection**, seamless WordPress integration, and a frictionless human-verification system (**Turnstile**) that would not interrupt legitimate buyers. Given these advantages, Cloudflare was the clear choice to block automated checkout attempts without disrupting the rest of the site.
-
-With the root cause confirmed, I moved forward with implementing the most effective and lowest-impact mitigation steps.
+I evaluated WooCommerce's built-in rate limiting, PayPal plugin adjustments, and traditional CAPTCHAs, but since the attack hit the Store API directly, bypassing browser-based protections, the fix needed to work at the edge. **Cloudflare Turnstile** was the best fit: edge-level bot filtering, seamless WordPress integration, and zero friction for real buyers.
 
 #### 1. Enable Cloudflare for the Website
 
