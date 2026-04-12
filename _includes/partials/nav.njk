@@ -1,6 +1,11 @@
 <header class="site-header">
   <nav class="nav" aria-label="Main">
     <a href="{{ '/' | url }}" class="nav-brand">{{ site.name }}</a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
     <ul class="nav-links">
       <li><a href="{{ '/' | url }}#projects">Projects</a></li>
       <li><a href="{{ '/writings/' | url }}">Writings</a></li>

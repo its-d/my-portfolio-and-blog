@@ -11,6 +11,27 @@ document.querySelectorAll('a[href^="#"]').forEach(function (a) {
   });
 });
 
+/* Mobile nav toggle */
+(function () {
+  const toggle = document.querySelector('.nav-toggle');
+  const links = document.querySelector('.nav-links');
+  if (!toggle || !links) return;
+
+  toggle.addEventListener('click', function () {
+    const open = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', !open);
+    links.classList.toggle('open');
+  });
+
+  // Close menu when a link is clicked
+  links.querySelectorAll('a').forEach(function (link) {
+    link.addEventListener('click', function () {
+      toggle.setAttribute('aria-expanded', 'false');
+      links.classList.remove('open');
+    });
+  });
+})();
+
 /* Hero typewriter — cycles through roles, respects reduced-motion */
 (function () {
   const target = document.querySelector('.hero-typewriter');
