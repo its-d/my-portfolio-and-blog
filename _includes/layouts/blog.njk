@@ -9,10 +9,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {% if baseUrl %}<base href="{{ baseUrl }}/">{% endif %}
   <title>{{ title }} | {{ site.name }}</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-  <link rel="icon" href="images/favicon-32x32.png" type="image/png" sizes="32x32">
-  <link rel="apple-touch-icon" href="images/apple-touch-icon.png" sizes="180x180">
+  <link rel="stylesheet" href="{{ '/css/style.css' | url | absoluteUrl }}">
+  <link rel="icon" href="{{ '/images/favicon.ico' | url | absoluteUrl }}" type="image/x-icon">
+  <link rel="icon" href="{{ '/images/favicon-32x32.png' | url | absoluteUrl }}" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="{{ '/images/apple-touch-icon.png' | url | absoluteUrl }}" sizes="180x180">
   {% if description %}
   <meta name="description" content="{{ description }}">
   {% endif %}
@@ -38,7 +38,7 @@
         </div>
         {% if image %}
         <div class="blog-hero-image-wrap">
-          <img src="{{ image }}" alt="" class="blog-hero-image" width="800" height="420">
+          <img src="{{ ('/' + image) | url | absoluteUrl }}" alt="" class="blog-hero-image" width="800" height="420">
         </div>
         {% endif %}
       </header>
@@ -54,7 +54,7 @@
         <div class="blog-about-author">
           <h3 class="blog-about-title">About {{ site.authorFullName }}</h3>
           <div class="blog-about-inner">
-            <img src="images/hero-profile.png" alt="{{ site.authorFullName }}" class="blog-about-photo" width="80" height="80">
+            <img src="{{ '/images/hero-profile.png' | url | absoluteUrl }}" alt="{{ site.authorFullName }}" class="blog-about-photo" width="80" height="80">
             <div class="blog-about-text">
               <p>{{ site.authorBioShort }}</p>
               <a href="{{ site.github }}" target="_blank" rel="noopener noreferrer" aria-label="GitHub">GitHub</a>
@@ -70,6 +70,6 @@
     </article>
   </main>
   {% include "partials/footer.njk" %}
-  <script src="js/main.js"></script>
+  <script src="{{ '/js/main.js' | url | absoluteUrl }}"></script>
 </body>
 </html>
