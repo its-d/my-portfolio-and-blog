@@ -991,6 +991,26 @@ section {
   gap: 1rem;
 }
 
+.contact-btn {
+  font-family: var(--font-mono);
+  min-width: 140px;
+  text-align: center;
+}
+
+.contact-sub {
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+  .contact-links {
+    flex-direction: column;
+  }
+  .contact-btn {
+    width: 100%;
+  }
+}
+
 /* Footer */
 .site-footer {
   border-top: 1px solid var(--border);

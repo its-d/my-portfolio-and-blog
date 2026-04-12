@@ -1,8 +1,12 @@
 <section class="contact" id="contact">
-  <h2 class="section-title">#contact</h2>
-  <div class="contact-links">
-    <a href="{{ site.resumeUrl | url }}" class="btn btn-primary" download="{{ site.resumeDownloadName }}">Resume ↓</a>
-    <a href="{{ site.linkedIn }}" target="_blank" rel="noopener noreferrer" class="btn btn-outline">LinkedIn</a>
-    <a href="{{ site.github }}" target="_blank" rel="noopener noreferrer" class="btn btn-outline">GitHub</a>
+  <div class="section-head">
+    <h2 class="section-title">#contact</h2>
+    <p class="eyebrow eyebrow-cmd">echo $CONTACT</p>
   </div>
+  <div class="contact-links">
+    <a href="{{ site.linkedIn }}" target="_blank" rel="noopener noreferrer" class="btn btn-primary contact-btn">LinkedIn →</a>
+    <a href="{{ site.github }}" target="_blank" rel="noopener noreferrer" class="btn btn-outline contact-btn">GitHub →</a>
+    <a href="{{ site.resumeUrl }}" class="btn btn-outline contact-btn" download="{{ site.resumeDownloadName }}">Resume ↓</a>
+  </div>
+  <p class="contact-sub eyebrow eyebrow-com">I check LinkedIn weekly — happy to chat about cloud, AWS, or building things.</p>
 </section>
