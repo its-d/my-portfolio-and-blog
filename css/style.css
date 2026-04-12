@@ -708,7 +708,7 @@ section {
   font-size: 0.9rem;
   padding: 0.5rem 1rem;
   background: var(--card-bg);
-  color: var(--text);
+  color: var(--accent);
   border-color: var(--border);
   cursor: default;
 }
