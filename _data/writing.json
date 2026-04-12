@@ -21,10 +21,10 @@
     "slug": "/writings/posts/eks-fargate-framework/"
   },
   {
-    "title": "AI-Powered Interview Prep: Personal Plans from Job Descriptions",
-    "summary": "Generating day-by-day study plans, flashcards, and practice questions from any job posting.",
-    "type": "case study",
-    "status": "coming-soon",
-    "slug": null
+    "title": "Secure Cloud Baseline: A Cost-Conscious Starting Point for AWS",
+    "summary": "A Terraform-based secure baseline for AWS that deploys logging, IAM roles, guardrails, and optional networking for under $25 a month.",
+    "type": "guide",
+    "status": "published",
+    "slug": "/writings/posts/secure-cloud-baseline/"
   }
 ]
