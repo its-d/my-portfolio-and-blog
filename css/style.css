@@ -691,6 +691,58 @@ section {
   color: var(--text-muted);
 }
 
+/* ============================================================
+   Testimonial — single pull-quote callout
+   ============================================================ */
+.testimonial-section {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+  text-align: center;
+}
+
+.testimonial-eyebrow {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.testimonial-card {
+  margin: 0;
+  padding: 2.5rem 2rem;
+  background: var(--card-bg);
+  border: 1px dashed var(--accent);
+  border-radius: 12px;
+}
+
+.testimonial-quote {
+  margin: 0 0 1.5rem;
+}
+
+.testimonial-quote p {
+  margin: 0;
+  font-size: 1.25rem;
+  font-style: italic;
+  line-height: 1.5;
+  color: var(--text);
+}
+
+.testimonial-attr {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+}
+
+.testimonial-name {
+  color: var(--text);
+  font-weight: 700;
+}
+
+.testimonial-role {
+  color: var(--text-muted);
+}
+
 /* Skills – 5 per row, reference style: light border, more black space between */
 .skills-grid {
   display: grid;
