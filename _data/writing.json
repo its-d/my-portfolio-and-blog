@@ -3,8 +3,8 @@
     "title": "From Weeks to Minutes: How AI Changed the Way I Build",
     "summary": "My journey from manual everything to fully AI-assisted development, and what it means for shipping faster.",
     "type": "blog",
-    "status": "coming-soon",
-    "slug": null
+    "status": "published",
+    "slug": "/writings/posts/from-weeks-to-minutes/"
   },
   {
     "title": "Stopping WooCommerce Checkout Bots at the Edge",
