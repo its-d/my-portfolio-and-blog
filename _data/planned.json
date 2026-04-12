@@ -1,5 +1,17 @@
 [
-  { "name": "iac-to-diagram", "description": "Paste Terraform, CDK, or CloudFormation and get an interactive architecture diagram out. Automatically generates accurate visual representations of your infrastructure so engineers skip the manual diagramming and non-technical stakeholders always have up-to-date docs." },
-  { "name": "terraform-pr-explainer", "description": "GitHub App that reads IaC pull requests and posts a plain-English comment explaining what infrastructure is actually changing, the estimated cost delta, and any obvious security flags — without changing anyone's existing workflow." },
-  { "name": "aws-bill-translator", "description": "Connects to AWS Cost Explorer and translates your bill into plain English with per-service explanations of what generated each charge, surfacing surprises like NAT gateway bleed or data transfer costs." }
+  {
+    "name": "ai-interview-prep",
+    "description": "An AI-powered tool that turns any job description into a personalized study plan, flashcards, and practice questions — so candidates walk into interviews fully prepared.",
+    "status": "in-dev"
+  },
+  {
+    "name": "iac-to-diagram",
+    "description": "Paste Terraform, CDK, or CloudFormation and get an interactive architecture diagram out. Generates accurate visual representations so engineers skip manual diagramming and stakeholders always have up-to-date docs.",
+    "status": "planning"
+  },
+  {
+    "name": "daily-feed",
+    "description": "A topic-organized RSS aggregator designed to live as a browser homepage. Pull feeds from across tech, news, and personal interests into one daily reading view.",
+    "status": "planning"
+  }
 ]
