@@ -1,11 +1,25 @@
 <section class="certifications" id="certifications">
-  <h2 class="section-title">#certifications</h2>
-  <p class="certifications-summary">These credentials validate skills in cloud platforms (AWS, Azure), security fundamentals, and infrastructure-as-code (Terraform), supporting delivery of secure, automated cloud solutions.</p>
+  <div class="section-head">
+    <h2 class="section-title">#certifications</h2>
+    <p class="eyebrow eyebrow-com">credentials</p>
+  </div>
+
   <div class="certs-grid">
     {% for cert in certifications %}
-    <div class="cert-item">
-      <span class="cert-name">{{ cert }}</span>
+    {% set inner %}
+    <div class="cert-badge">
+      <img src="{{ cert.image }}" alt="{{ cert.name }}" class="cert-image" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+      <div class="cert-fallback" style="display: none;">
+        <span class="cert-fallback-name">{{ cert.shortName or cert.name }}</span>
+      </div>
+      <span class="cert-caption">{{ cert.shortName or cert.name }}</span>
     </div>
+    {% endset %}
+    {% if cert.credlyUrl %}
+    <a href="{{ cert.credlyUrl }}" target="_blank" rel="noopener noreferrer" class="cert-link" aria-label="{{ cert.name }} on Credly">{{ inner | safe }}</a>
+    {% else %}
+    <div class="cert-link cert-link-static">{{ inner | safe }}</div>
+    {% endif %}
     {% endfor %}
   </div>
 </section>
