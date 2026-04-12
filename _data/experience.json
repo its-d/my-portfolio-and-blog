@@ -4,6 +4,7 @@
     "title": "Contractor",
     "dates": "August 2025 – Present",
     "location": "Remote",
+    "featured": true,
     "bullets": [
       "Provided technical diagnostic and incident response services for small business clients",
       "Identified WooCommerce Store API bot exploits and guided client through Cloudflare edge security implementation, resulting in zero fraudulent orders post-resolution",
@@ -15,6 +16,7 @@
     "title": "Cloud Consultant",
     "dates": "December 2020 – August 2025",
     "location": "Arlington, VA",
+    "featured": true,
     "bullets": [
       "Led design and implementation of serverless ETL pipeline architecture using AWS Step Functions, Amazon EventBridge, Amazon ECS Fargate, and Docker Containers",
       "Engineered CI/CD automation framework using GitLab CI/CD and AWS CDK, resulting in 94% reduction in manual operations and standardized IaC practices",
@@ -27,6 +29,7 @@
     "title": "Applications Developer",
     "dates": "April 2019 – December 2020",
     "location": "Falls Church, VA",
+    "featured": false,
     "bullets": [
       "Led AWS infrastructure operations: RDS optimization, SQS monitoring, S3 security, CloudWatch alerting",
       "Developed Java-based microservices and REST APIs integrated with MySQL; automated CI/CD and coding standards",
@@ -38,6 +41,7 @@
     "title": "Software Support Analyst",
     "dates": "March 2018 – April 2019",
     "location": "Annapolis, MD",
+    "featured": false,
     "bullets": [
       "Collaborated with backend team implementing enterprise software using SQL Server, stored procedures, and query optimization",
       "Led technical troubleshooting of client systems, resolving server-to-server and database connectivity issues while maintaining 24-hour SLA",
