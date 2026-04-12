@@ -6,10 +6,10 @@
   {% if baseUrl %}<base href="{{ baseUrl }}/">{% endif %}
   <title>{% if title %}{{ title }} | {% endif %}{{ site.name }}</title>
   <link rel="stylesheet" href="{{ '/css/style.css' | url | absoluteUrl }}">
-  <link rel="icon" href="{{ '/images/self/favicons/favicon.ico' | url | absoluteUrl }}" type="image/x-icon">
-  <link rel="icon" href="{{ '/images/self/favicons/favicon-32x32.png' | url | absoluteUrl }}" type="image/png" sizes="32x32">
-  <link rel="icon" href="{{ '/images/self/favicons/favicon-16x16.png' | url | absoluteUrl }}" type="image/png" sizes="16x16">
-  <link rel="apple-touch-icon" href="{{ '/images/self/favicons/apple-touch-icon.png' | url | absoluteUrl }}" sizes="180x180">
+  <link rel="icon" href="{{ '/images/self/favicons/favicon.ico' | url | absoluteUrl }}?v=2" type="image/x-icon">
+  <link rel="icon" href="{{ '/images/self/favicons/favicon-32x32.png' | url | absoluteUrl }}?v=2" type="image/png" sizes="32x32">
+  <link rel="icon" href="{{ '/images/self/favicons/favicon-16x16.png' | url | absoluteUrl }}?v=2" type="image/png" sizes="16x16">
+  <link rel="apple-touch-icon" href="{{ '/images/self/favicons/apple-touch-icon.png' | url | absoluteUrl }}?v=2" sizes="180x180">
 </head>
 <body class="{% if title == 'Blog' %}page-blog{% endif %}">
   {{ content | safe }}
