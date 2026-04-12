@@ -1,17 +1,55 @@
 <section class="hero" id="home">
-  <div class="hero-inner">
-    <div class="hero-text">
-      <h1 class="hero-headline">{{ site.headline | safe }}</h1>
-      <p class="hero-sub">{{ site.title }}</p>
-      <a href="#quote" class="btn btn-primary">Scroll down +</a>
+  <div class="hero-grid">
+
+    <div class="hero-left">
+      <p class="hero-eyebrow eyebrow eyebrow-cmd">whoami</p>
+
+      <h1 class="hero-headline">I'm Darian.</h1>
+
+      <div class="hero-tagline" aria-label="What I do">
+        <span class="pill hero-tagline-pill">
+          <span class="hero-typewriter" aria-hidden="true"></span>
+          <span class="hero-typewriter-cursor" aria-hidden="true">_</span>
+        </span>
+        <span class="visually-hidden">I develop cloud infrastructure, automate DevOps, ship AWS systems, and build agentic AI tools.</span>
+      </div>
+
+      <a href="#contact" class="btn btn-primary hero-cta">Get in touch →</a>
+
+      <ul class="hero-stats">
+        <li class="hero-stat">
+          <span class="hero-stat-num">8<span class="hero-stat-plus">+</span></span>
+          <span class="hero-stat-label">Years<br>Building</span>
+        </li>
+        <li class="hero-stat">
+          <span class="hero-stat-num">4,400<span class="hero-stat-plus">+</span></span>
+          <span class="hero-stat-label">Engineers<br>Reached</span>
+        </li>
+        <li class="hero-stat">
+          <span class="hero-stat-num">8</span>
+          <span class="hero-stat-label">Certifications</span>
+        </li>
+      </ul>
     </div>
-    <div class="hero-photo">
-      <img src="{{ '/images/hero-profile.png' | url | absoluteUrl }}" alt="{{ site.name }}" width="280" height="280" class="hero-img">
-      <p class="hero-photo-label">{{ site.photoLabel }}</p>
-      <div class="hero-links">
-        <a href="{{ site.linkedIn }}" target="_blank" rel="noopener noreferrer" class="hero-link" aria-label="LinkedIn">LinkedIn</a>
-        <a href="{{ site.github }}" target="_blank" rel="noopener noreferrer" class="hero-link" aria-label="GitHub">GitHub</a>
+
+    <div class="hero-right">
+      <div class="hero-photo-block">
+        <img
+          src="/images/self/hero-darian.png"
+          alt="Darian Lee"
+          class="hero-photo"
+          width="600"
+          height="400"
+        >
+        <span class="hero-vertical">// MY · STACK ·</span>
+        <ul class="hero-stack-icons" aria-label="My stack">
+          <li><img src="/images/blog/skills/aws.png" alt="AWS"></li>
+          <li><img src="/images/blog/skills/terraform.jpg" alt="Terraform"></li>
+          <li><img src="/images/blog/skills/python.png" alt="Python"></li>
+          <li><span class="pill hero-stack-pill">automation</span></li>
+        </ul>
       </div>
     </div>
+
   </div>
 </section>
