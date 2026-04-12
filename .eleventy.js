@@ -35,7 +35,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addGlobalData("baseUrl", baseUrl);
 
   eleventyConfig.addFilter("absoluteUrl", function (path) {
-    const base = process.env.BASE_URL || "https://its-d.github.io";
+    const base = process.env.BASE_URL || "";
+    if (!base) return path || "/";
     if (!path) return base;
     try {
       return new URL(path, base.endsWith("/") ? base : base + "/").href;
