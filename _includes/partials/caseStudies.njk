@@ -1,0 +1,21 @@
+<section class="case-studies" id="case-studies">
+  <div class="section-head">
+    <h2 class="section-title">#case-studies</h2>
+    <p class="eyebrow eyebrow-com">deep dives</p>
+  </div>
+
+  <div class="case-study-grid">
+    {% for study in caseStudies %}
+    <article class="case-study-card">
+      <span class="pill case-study-badge">case study</span>
+      <h3 class="case-study-title">{{ study.title }}</h3>
+      <p class="case-study-summary">{{ study.summary }}</p>
+      {% if study.status == "published" and study.slug %}
+      <a href="{{ study.slug }}" class="case-study-link">Read case study →</a>
+      {% else %}
+      <span class="pill pill-dashed case-study-pending">coming soon</span>
+      {% endif %}
+    </article>
+    {% endfor %}
+  </div>
+</section>
