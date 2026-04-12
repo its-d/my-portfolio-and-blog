@@ -679,13 +679,6 @@ body.page-blog .footer-col {
   color: var(--accent);
 }
 
-.footer-bottom {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 1rem 1.5rem 2rem;
-  border-top: 1px solid var(--border);
-}
-
 .footer-copy {
   margin: 0;
   font-size: 0.9rem;
@@ -704,6 +697,76 @@ body.page-blog .footer-col {
 
 .footer-links a:hover {
   color: var(--accent);
+}
+
+/* Footer — motto + latest writing column */
+.footer-motto {
+  margin: 0 0 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--accent);
+}
+
+.footer-latest-list {
+  list-style: none;
+  margin: 0 0 0.75rem;
+  padding: 0;
+}
+
+.footer-latest-list li {
+  margin-bottom: 0.6rem;
+  font-size: 0.9rem;
+  line-height: 1.35;
+}
+
+.footer-latest-list a {
+  color: var(--text-muted);
+  display: block;
+}
+
+.footer-latest-list a:hover {
+  color: var(--accent);
+}
+
+.footer-latest-date {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  opacity: 0.7;
+  margin-top: 0.15rem;
+}
+
+.footer-latest-all {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+}
+
+/* Footer bottom-bar layout */
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem 2rem;
+  border-top: 1px solid var(--border);
+}
+
+.footer-whoami {
+  margin: 0;
+  font-size: 0.8rem;
+}
+
+@media (max-width: 600px) {
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 /* Blog index — sidebar + content, blue blocks */

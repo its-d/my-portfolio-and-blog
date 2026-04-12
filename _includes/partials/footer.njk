@@ -1,31 +1,55 @@
 <footer class="site-footer site-footer-columns">
   <div class="footer-inner">
     <div class="footer-col footer-about">
-      <h3 class="footer-col-title">About {{ site.authorFullName }}</h3>
+      <p class="footer-motto">
+        Always Building.<br>
+        Always Learning.<br>
+        Always Sharing.
+      </p>
       <p class="footer-about-text">{{ site.authorBioFooter }}</p>
       <a href="{{ site.github }}" target="_blank" rel="noopener noreferrer" class="btn btn-outline footer-github">Follow on GitHub</a>
     </div>
+
+    {% set isBlogContext = page.url == '/blog/' or '/blog/posts/' in page.url %}
+    {% if isBlogContext %}
     <div class="footer-col footer-categories">
-      <h3 class="footer-col-title">Categories</h3>
+      <h3 class="footer-col-title eyebrow eyebrow-com">categories</h3>
       <ul class="footer-cat-list">
         {% for cat in collections.categories %}
         <li><a href="{{ '/blog/' | url }}?category={{ cat | urlencode }}">{{ cat | categoryLabel }}</a></li>
         {% endfor %}
       </ul>
     </div>
+    {% else %}
+    <div class="footer-col footer-latest">
+      <h3 class="footer-col-title eyebrow eyebrow-com">latest writing</h3>
+      <ul class="footer-latest-list">
+        {% for post in collections.posts %}
+          {% if loop.index <= 2 %}
+          <li>
+            <a href="{{ post.url | url }}">{{ post.data.title }}</a>
+            <span class="footer-latest-date">{{ post.date | date('MMM d, yyyy') }}</span>
+          </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+      <a href="{{ '/blog/' | url }}" class="footer-latest-all">View all posts →</a>
+    </div>
+    {% endif %}
+
     <div class="footer-col footer-links">
-      <h3 class="footer-col-title">Useful Links</h3>
+      <h3 class="footer-col-title eyebrow eyebrow-com">quick links</h3>
       <ul class="footer-links-list">
         <li><a href="{{ '/' | url }}">Home</a></li>
-        <li><a href="{{ '/' | url }}#about">About</a></li>
         <li><a href="{{ '/' | url }}#projects">Projects</a></li>
-        <li><a href="{{ '/' | url }}#skills">Skills</a></li>
         <li><a href="{{ '/blog/' | url }}">Blog</a></li>
+        <li><a href="{{ '/' | url }}#about">About</a></li>
         <li><a href="{{ '/' | url }}#contact">Contact</a></li>
       </ul>
     </div>
   </div>
   <div class="footer-bottom">
     <p class="footer-copy">© {{ site.year }}. Made by {{ site.name }}.</p>
+    <p class="footer-whoami eyebrow eyebrow-cmd">whoami · {{ site.authorFullName }}</p>
   </div>
 </footer>
