@@ -252,6 +252,10 @@ a:hover {
   color: var(--accent-pink);
 }
 
+.code-glyph {
+  color: var(--accent-pink);
+}
+
 /* ============================================================
    Hero — split-screen, dark left + orange right
    ============================================================ */
